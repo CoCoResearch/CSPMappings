@@ -1,7 +1,11 @@
 package co.edu.uniandes;
 
 import co.edu.uniandes.mapping.MappingAlternative;
+import co.edu.uniandes.mapping.MappingChildSelection;
+import co.edu.uniandes.mapping.MappingMandatory;
+import co.edu.uniandes.mapping.MappingOptional;
 import co.edu.uniandes.mapping.MappingOr;
+import co.edu.uniandes.mapping.MappingParentDeselection;
 
 public class Main {
 
@@ -10,7 +14,7 @@ public class Main {
 		/*Model1 model1 = new Model1();
 		model1.solveProblem();*/
 		
-		MappingAlternative model1 = new MappingAlternative();
+		MappingParentDeselection model1 = new MappingParentDeselection();
 		model1.solveProblem();
 	}
 }
