@@ -1,4 +1,4 @@
-package co.edu.uniandes.mapping;
+package co.edu.uniandes.mapping.featuremodel;
 
 import org.chocosolver.solver.Solver;
 import org.chocosolver.solver.constraints.SatFactory;
@@ -7,7 +7,7 @@ import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingAlternative {
+public class MappingTCAlternative {
 	
 	public void solveProblem() {
 		Solver solver = new Solver( );

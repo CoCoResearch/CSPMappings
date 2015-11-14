@@ -1,11 +1,13 @@
 package co.edu.uniandes;
 
-import co.edu.uniandes.mapping.MappingAlternative;
-import co.edu.uniandes.mapping.MappingChildSelection;
-import co.edu.uniandes.mapping.MappingMandatory;
-import co.edu.uniandes.mapping.MappingOptional;
-import co.edu.uniandes.mapping.MappingOr;
-import co.edu.uniandes.mapping.MappingParentDeselection;
+import co.edu.uniandes.mapping.featuremodel.MappingCTCExcludes;
+import co.edu.uniandes.mapping.featuremodel.MappingCTCRequires;
+import co.edu.uniandes.mapping.featuremodel.MappingPCChildSelection;
+import co.edu.uniandes.mapping.featuremodel.MappingPCParentDeselection;
+import co.edu.uniandes.mapping.featuremodel.MappingTCAlternative;
+import co.edu.uniandes.mapping.featuremodel.MappingTCMandatory;
+import co.edu.uniandes.mapping.featuremodel.MappingTCOptional;
+import co.edu.uniandes.mapping.featuremodel.MappingTCOr;
 
 public class Main {
 
@@ -14,7 +16,7 @@ public class Main {
 		/*Model1 model1 = new Model1();
 		model1.solveProblem();*/
 		
-		MappingParentDeselection model1 = new MappingParentDeselection();
+		MappingCTCRequires model1 = new MappingCTCRequires();
 		model1.solveProblem();
 	}
 }
