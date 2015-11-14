@@ -1,4 +1,4 @@
-package co.edu.uniandes;
+package co.edu.uniandes.scenarios;
 
 import org.chocosolver.solver.MasterSolver;
 import org.chocosolver.solver.Solver;
@@ -73,19 +73,34 @@ public class Model1 {
 		//----------------------------------------
 		
 		// Mandatory
-		SatFactory.addClauses(LogOp.and(E, E1), solver);
+		SatFactory.addClauses(LogOp.implies(E, E1), solver);
 		
 		// Or
 		SatFactory.addClauses(LogOp.or(A1, A2), solver);
+		/*BoolVar[] varsOr1 = new BoolVar[3];
+		varsOr1[0] = e1;
+		varsOr1[1] = e2;
+		varsOr1[2] = e3;
+		SatFactory.addClauses(LogOp.or(varsOr1), solver);*/
 		
 		// Alternative
-		SatFactory.addClauses(LogOp.xor(C1, C2), solver);
-		SatFactory.addClauses(LogOp.xor(C1, C3), solver);
-		//SatFactory.addClauses(LogOp.xor(C2, C3), solver);
+		BoolVar[] varsXor1 = new BoolVar[3];
+		varsXor1[0] = C1;
+		varsXor1[1] = C2;
+		varsXor1[2] = C3;
+		SatFactory.addClauses(LogOp.or(varsXor1), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(C1,LogOp.nor(C2)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(C1,LogOp.nor(C3)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(C2,LogOp.nor(C3)), solver);
 		
-		SatFactory.addClauses(LogOp.xor(e1, e2), solver);
-		SatFactory.addClauses(LogOp.xor(e1, e3), solver);
-		//SatFactory.addClauses(LogOp.xor(e2, e3), solver);
+		BoolVar[] varsXor2 = new BoolVar[3];
+		varsXor2[0] = e1;
+		varsXor2[1] = e2;
+		varsXor2[2] = e3;
+		SatFactory.addClauses(LogOp.or(varsXor2), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(e1,LogOp.nor(e2)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(e1,LogOp.nor(e3)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(e2,LogOp.nor(e3)), solver);
 		
 		//----------------------------------------
 		// CROSS-TREE CONSTRAINTS
