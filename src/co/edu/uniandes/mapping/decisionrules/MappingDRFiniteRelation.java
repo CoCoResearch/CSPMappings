@@ -6,7 +6,7 @@ import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingFiniteRelation {
+public class MappingDRFiniteRelation {
 
 	public void solveProblem() {
 		Solver solver = new Solver( );
