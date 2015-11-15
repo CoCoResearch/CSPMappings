@@ -13,11 +13,11 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class Model1 {
+public class Scenario1 {
 
 	private Solver solver;
 	
-	public Model1() {
+	public Scenario1() {
 		this.solver = new Solver( );
 	}
 	

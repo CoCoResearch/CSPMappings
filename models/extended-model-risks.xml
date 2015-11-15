@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel chosenLayoutAlgorithm="1">
+	<struct>
+		<and mandatory="true" name="EstructuraDecisiones">
+    		<or mandatory="true" name="MotivadoresdeNegocio">
+				<feature mandatory="true" name="Segmentarydepurarclientes"/>
+				<feature mandatory="true" name="Planificacionypresupuestosdemercadeo"/>
+				<feature mandatory="true" name="Gestiondedatosylistas"/>
+				<feature mandatory="true" name="Analisisdemarketing"/>
+				<feature mandatory="true" name="GestiondeCampanias"/>
+				<feature mandatory="true" name="Facilitartareasdemercadeoypublicidad"/>
+				<feature mandatory="true" name="Gestionderespuestasyclientespotenciales"/>
+				<feature mandatory="true" name="Reducirciclosdeventas"/>
+				<feature mandatory="true" name="Aumentartasasdecierredeventas"/>
+				<feature mandatory="true" name="Mejorarretenciondeclientes"/>
+				<feature mandatory="true" name="Implementarnuevoprocesodeventas"/>
+				<feature mandatory="true" name="Gestionarinformaciondeclientes"/>
+				<feature mandatory="true" name="Gestiondecasosdeclientes"/>
+				<feature mandatory="true" name="Historialdeserviciosdeclientes"/>
+				<feature mandatory="true" name="Aumentarbasedeclientes"/>
+				<feature mandatory="true" name="Implementarnuevoprocesodeatencionalcliente"/>
+				<feature mandatory="true" name="Mejorarconocimientodelcliente"/>
+				<feature mandatory="true" name="Medirsatisfacciondelconsumidor"/>
+				<feature mandatory="true" name="Controlsobrerecursoshumanos"/>
+				<feature mandatory="true" name="Nuevosprocesosderecursoshumanos"/>
+				<feature mandatory="true" name="Reclutamiento"/>
+				<feature mandatory="true" name="Biodata_hojasdevida"/>
+				<feature mandatory="true" name="Analisisdecargos_estructuraorganizacional"/>
+				<feature mandatory="true" name="Nominayadministraciondesalarios"/>
+				<feature mandatory="true" name="Educacionycapacitacion"/>
+				<feature mandatory="true" name="Saludocupacional"/>
+				<feature mandatory="true" name="Modelamientodeprocesosyorganigramas"/>
+				<feature mandatory="true" name="Nuevosprocesosfinancieros"/>
+				<feature mandatory="true" name="Implementarcontrolessobreprocesosfinancieros"/>
+				<feature mandatory="true" name="Gestioncontable"/>
+				<feature mandatory="true" name="Manejodecuentasporpagar_Proveedores"/>
+				<feature mandatory="true" name="Sistemasdecosteo"/>
+				<feature mandatory="true" name="Administraciondeactivosfijos"/>
+				<feature mandatory="true" name="Manejodeconciliacionesbancarias"/>
+				<feature mandatory="true" name="Controldeinversiones"/>
+				<feature mandatory="true" name="Manejodeobligacionesfinancieras"/>
+				<feature mandatory="true" name="Tesoreria"/>
+				<feature mandatory="true" name="Contabilidadanalitica"/>
+				<feature mandatory="true" name="Controlyadministraciondelpresupuesto"/>
+				<feature mandatory="true" name="Manejodeactivosdecapital"/>
+				<feature mandatory="true" name="Manejodeinventarios"/>
+				<feature mandatory="true" name="Manejodealmacen"/>
+				<feature mandatory="true" name="Gestiondecompras"/>
+				<feature mandatory="true" name="Gestiondeactivosfijos"/>
+				<feature mandatory="true" name="Comercioexterior"/>
+				<feature mandatory="true" name="Seguros"/>
+				<feature mandatory="true" name="Manejodeordenesdeproduccion"/>
+				<feature mandatory="true" name="Manejodeordenesdecompra"/>
+				<feature mandatory="true" name="Planificaciondenecesidadesdecapacidad"/>
+				<feature mandatory="true" name="Planificaciondesuministros"/>
+				<feature mandatory="true" name="Disminuirtiemposdeentrega"/>
+				<feature mandatory="true" name="Integracionconproveedores"/>
+				<feature mandatory="true" name="Gestiondeproveedores"/>
+				<feature mandatory="true" name="Administraciondemateriasprimas"/>
+				<feature mandatory="true" name="Gestiondebodega"/>
+				<feature mandatory="true" name="Realizarcontroldecostos"/>
+				<feature mandatory="true" name="Administraciondepedidosydespachos"/>
+				<feature mandatory="true" name="Gestiondecontactos"/>
+				<feature mandatory="true" name="Ajustarprocesosdeflujodetrabajo"/>
+				<feature mandatory="true" name="Mejorarcapacidadderespuesta"/>
+				<feature mandatory="true" name="Gestionarpresupuestos"/>
+				<feature mandatory="true" name="Crearyconsolidarinformes"/>
+				<feature mandatory="true" name="Buscartendenciasyrelaciones"/>
+				<feature mandatory="true" name="Compartirconocimiento"/>
+				<feature mandatory="true" name="Organizarrecursosdeservicio"/>
+				<feature mandatory="true" name="Facturacionydevolucion"/>
+				<feature mandatory="true" name="Cartera"/>
+				<feature mandatory="true" name="Administraciondepreciosydescuentos"/>
+				<feature mandatory="true" name="Administraciondepromociones"/>
+				<feature mandatory="true" name="Administraciondecuotaseincentivos"/>
+				<feature mandatory="true" name="Administraciondevisitacomercial"/>
+				<feature mandatory="true" name="Importacionesyexportaciones"/>
+				<feature mandatory="true" name="Gestionarcontratosdeservicio"/>
+				<feature mandatory="true" name="Presupuestarcostosytiempos"/>
+				<feature mandatory="true" name="Automatizarlafacturacion"/>
+				<feature mandatory="true" name="Predecirdisponibilidades"/>
+				<feature mandatory="true" name="Seguimientodecostosyconsumos"/>
+				<feature mandatory="true" name="Planificarcapacidades"/>
+				<feature mandatory="true" name="Planearygestionarcapacidaddebodegajeyalmacenamiento"/>
+				<feature mandatory="true" name="Gestiondetransportedemercancia"/>
+				<feature mandatory="true" name="Logisticadetransporteinternacional"/>
+				<feature mandatory="true" name="Gestionderelacionconproveedores"/>
+				<feature mandatory="true" name="Gestiondelademanda"/>
+			</or>
+      		<alt mandatory="true" name="SistemasEmpresariales">
+      			<or mandatory="true" name="CRM_CustomerRelationshipManagement">
+      				<feature extended="true" mandatory="true" name="CRM_Modulomarketing">
+            			<featureAttribute dimension="Indicadores" dimensionID="19" impactVariable="Costototaldemanejoporcanal" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="19" impactVariable="Tiempoderespuestaalcliente" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="19" impactVariable="Costototaldepromociones" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="19" impactVariable="Campaniasdemercadeo" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="19" impactVariable="Eficienciaporcanal" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="CRM_ModuloVentas">
+            			<featureAttribute dimension="Indicadores" dimensionID="16" impactVariable="Ganaciasporempleado" maxMagnitude="" minMagnitude="" observations=""/>
+           				<featureAttribute dimension="Indicadores" dimensionID="16" impactVariable="Ventasporempleado" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="16" impactVariable="Ventasnetas" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="16" impactVariable="Tasaderetenciondeclientes" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="19" impactVariable="Tiempodenegociacionantesdelaventa" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="19" impactVariable="Tiempodeentregadespuesdelaventa" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="CRM_Modulodeclientes">
+            			<featureAttribute dimension="Indicadores" dimensionID="16" impactVariable="Imagendemarca" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Visitasaclientespordia" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Nuevossegmentoscreados" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Prospectosnuevospordia" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Clientesnuevospordia" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Niveldeservicio" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+				</or>
+				<or mandatory="true" name="ERP_Enterpriseresourceplanning">
+					<feature extended="true" mandatory="true" name="ERP_Modulorecursoshumanos">
+            			<featureAttribute dimension="Indicadores" dimensionID="14" impactVariable="Costosporempleado" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="14" impactVariable="Productividadporempleado" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="14" impactVariable="Costosdeentrenamientoporempleado" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="15" impactVariable="Horasdeentrenamientoporempleado" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tasaderetenciondeempleados" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="ERP_Modulofinanciero">
+            			<featureAttribute dimension="Indicadores" dimensionID="15" impactVariable="Retornodeinversion" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="15" impactVariable="Aumentoeningresosoperativos" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="15" impactVariable="Rentabilidaddelpatrimonio" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="15" impactVariable="Rentabilidaddeactivos" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="15" impactVariable="Utilidadesporaccion" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="ERP_Moduloadministrativo">
+            			<featureAttribute dimension="Indicadores" dimensionID="16" impactVariable="Rotaciondeinventarios" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="16" impactVariable="Rotaciondecartera" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Precisiondeinventarios" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempoderespuestaordenes" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempodecompras" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="ERP_Modulodeproduccion">
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempopromediodeesperaenentregadepedidos" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempoderespuestaenprocesamientodeordenes" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Efectividadprocesodefacturacion" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="ERP_Modulodeclientes">
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Clientesnuevospordia" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Imagencorporativa" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Retenciondeclientes" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Satisfacciondelcliente" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="ERP_Modulodegestiondeabastecimiento">
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempototalcadenadeabastecimiento" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="ERP_Modulodeinteligenciadenegocio">
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Disponibilidaddeinformacionpordemanda" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature extended="true" mandatory="true" name="ERP_Marketingyventas">
+            			<featureAttribute dimension="Indicadores" dimensionID="10" impactVariable="Ventasporempleado" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="11" impactVariable="Tasaderetenciondeclientes" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="11" impactVariable="Ventasnetas" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tasadecrecimientodeventas" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempodeentregadespuesdelaventa" maxMagnitude="" minMagnitude="" observations=""/>
+            			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempodenegociacionantesdelaventa" maxMagnitude="" minMagnitude="" observations=""/>
+          			</feature>
+					<feature mandatory="true" name="ERP_Modulodegestiondeproyectos"/>
+				</or>
+				<feature extended="true" mandatory="true" name="SCM_Sistemadegestiondeabastecimiento">
+          			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Frecuenciadeentrega" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Efectividadplanmaestrodeproduccion" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Calidaddeentrega" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempodeentrega" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Tiempoenrutamientodeordenes" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Niveldeentregaslibresdedefectos" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Indicadores" dimensionID="17" impactVariable="Costototaldeinventario" maxMagnitude="" minMagnitude="" observations=""/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones innecesarias en TI."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sistemas totalmente operativos que no se utilizan para nada."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Gastos de mantenimiento y almacenamiento extras."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Retrasos en la implantación."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de credibilidad en el área de TI y el proyecto mismo."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mal ambiente en la organización alrededor de la iniciativa."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de dinero y sobrecostos de implantación."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Retrasos en la implantación."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de credibilidad en el área encargada de llevar a cabo el proyecto y el proyecto mismo."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Falta de compromiso del personal."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="A pesar de que la implementación del SCM sea exitosa, el retorno y beneficios obtenidos no serán los esperados, haciendo inútil la inversión."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="A pesar de que la implementación del SCM sea exitosa, las áreas y procesos prioritarios para la organización no se verán beneficiados, haciendo inútil la inversión."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Implementación fallida."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por los retrasos presentados o pérdida total de los recursos del proyecto si éste se cancela."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Traumatismo generalizado en la organización por intentar realizar los cambios requeridos sin la planeación necesaria."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de la productividad."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pueden quedar requerimientos faltantes que se necesitaban, lo que genera inversiones adicionales para implementar lo que quedo por fuera del alcance inicial."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pueden quedar requerimientos sobrantes que eran prescindibles, lo que genera inversiones perdidas por los componentes que no se van usar."/>
+        		</feature>
+			</alt>
+      		<alt mandatory="true" name="NuevovsExistente">
+				<feature extended="true" mandatory="true" name="Adquirirsistemanuevo">
+          			<featureAttribute dimension="Costos" dimensionID="1" impactVariable="Migracion" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="10" impactVariable="Capacitacion" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="11" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Tiempo" dimensionID="12" impactVariable="Capacitacion" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="RecursosHumanos" dimensionID="12" impactVariable="Tecnico" maxMagnitude="2" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="RecursosHumanos" dimensionID="12" impactVariable="Consultor" maxMagnitude="1" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Tiempo" dimensionID="12" impactVariable="" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Tiempo" dimensionID="12" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations=""/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Uso incorrecto del nuevo sistema."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mayor incidencia de errores involuntarios por falta de capacitación."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mayor incidencia de errores en las aplicaciones."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Frustración de los clientes y usuarios que utilizan las aplicaciones."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por soporte adicional de las aplicaciones debido al mal uso."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones adicionales en interfaces y mecanismos de comunicación entre sistemas."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de migración y configuración adicional en algunos casos."/>
+        		</feature>
+				<feature extended="true" mandatory="true" name="Adaptarsistemaexistente">
+          			<featureAttribute dimension="Costos" dimensionID="2" impactVariable="Configuracion" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Tiempo" dimensionID="3" impactVariable="Configuracion" maxMagnitude="" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="RecursosHumanos" dimensionID="4" impactVariable="Consultor" maxMagnitude="1" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="RecursosHumanos" dimensionID="8" impactVariable="Tecnico" maxMagnitude="1" minMagnitude="" observations=""/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de latencia en el sistema."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Aumento en los recursos de infraestructura utilizados."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Establecimiento de mecanismos adicionales para garantizar la interoperabilidad."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones adicionales (importantes) para contratar expertos en sistemas programados bajo lenguajes de programación poco comunes."/>
+        		</feature>
+			</alt>
+      		<alt mandatory="true" name="Tercerizacion">
+				<feature extended="true" mandatory="true" name="Subcontratarpersonalizacion">
+          			<featureAttribute dimension="Costos" dimensionID="8" impactVariable="Implementacion" maxMagnitude="200000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Consideracion" dimensionID="8" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Liberaalaempresadelastareasfuncionalesytecnicasypermiteliberarrecursosparadestinarlosalasactividadescoredelnegocio"/>
+          			<featureAttribute dimension="RecursosHumanos" dimensionID="9" impactVariable="Implementacion" maxMagnitude="10" minMagnitude="" observations="Requierepersonalqueformepartedelequipointerdisciplinarioquetrabajaraconelproveedorenellevantamientoderequerimientosfuncionales"/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mala calidad en el proceso de personalización."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes o nuevos contratos de tercerización para ajustar o mejorar la calidad del proceso."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar el proceso de personalización, pues dentro de la organización no será posible soportarlo debido a la falta de capacidades y conocimiento."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+        		</feature>
+				<feature extended="true" mandatory="true" name="Subcontratarpartedeldesarrolloeintegracion">
+          			<featureAttribute dimension="Consideracion" dimensionID="9" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Liberaalaempresadelastareasfuncionalesytecnicasypermiteliberarrecursosparadestinarlosalasactividadescoredelnegocio"/>
+          			<featureAttribute dimension="Costos" dimensionID="9" impactVariable="Implementacion" maxMagnitude="300000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Consideracion" dimensionID="12" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Requierepersonalcalificadoparaseleccionarelproveedoryestablecerlosterminosycondicionesdeloscontratos"/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar los procesos de desarrollo e integración, pues dentro de la organización no será posible soportarlos debido a la falta de capacidades y conocimientos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mala calidad en los procesos de desarrollo e integración."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes o nuevos contratos de tercerización para ajustar o mejorar la calidad de los procesos."/>
+        		</feature>
+				<feature extended="true" mandatory="true" name="Subcontratarlaadministraciondeunprocesodenegociocompleto">
+          			<featureAttribute dimension="Consideracion" dimensionID="8" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Losresultadosdelaempresaquedansujetosalcumplimientodelosacuerdosdenivelesdeservicioconelproveedor"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="8" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Posibilidaddetomarventajadelaincorporaciondemejorespracticasdelaindustriayknowhowquederivenenunaventajacompetitiva"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="8" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Perdidadecontrolsobrelosprocesosdenegocio"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="12" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Requiereunproveedorconaltoniveldeconocimientodelsectorydelnegocio"/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Implementacion" maxMagnitude="500" minMagnitude="" observations=""/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías y procedimientos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar ese proceso de negocio, pues dentro de la organización no será posible soportarlo debido a la falta de capacidades y conocimiento."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mala calidad en el proceso de negocio dado en subcontratación."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes o nuevos contratos de tercerización para ajustar o mejorar la calidad del mismo."/>
+        		</feature>
+				<feature extended="true" mandatory="true" name="Subcontratargerenciadelproyectodeimplementacion">
+          			<featureAttribute dimension="Consideracion" dimensionID="8" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Liberalosrecursosgerencialesdelacompaniaparaqueseanusadosenactividadespropiasdelcoredelnegocio"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="8" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Implicaquelaresponsabilidadporelcumplimientodelosobjetivosyfechasquedaenmanosdeunterceroysuincumplimientorepercuteenlosobjetivosdenegocio"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="8" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Requiereunproveedorconexperienciaampliaydemostrableenimplementacionesexitosasdesistemasempresarialesenlamismaindustria"/>
+          			<featureAttribute dimension="Costos" dimensionID="8" impactVariable="Implementacion" maxMagnitude="500" minMagnitude="" observations=""/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías y procedimientos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar la gerencia de proyectos, pues dentro de la organización no será posible soportarlo debido a la falta de capacidades y conocimiento."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mala gerencia del proyecto de implementación."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Aparición de retrasos e incumplimiento de metas y objetivos del proyecto."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes y nuevos contratos de gerencia o interventoría para ajustar y/o mejorar la calidad del proyecto de implementación."/>
+        		</feature>
+			</alt>
+      		<alt mandatory="true" name="TipodeSolucion">
+				<feature extended="true" mandatory="true" name="Comercial">
+          			<featureAttribute dimension="Costos" dimensionID="5" impactVariable="Soporte" maxMagnitude="5000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="6" impactVariable="Licenciamiento" maxMagnitude="750" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="7" impactVariable="Adquisicion" maxMagnitude="500000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Consideracion" dimensionID="11" impactVariable="Soporte" maxMagnitude="" minMagnitude="" observations="Elproveedorofrecerasuficientegarantiaysoporteporelproductoentregado"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="11" impactVariable="Escalamiento" maxMagnitude="" minMagnitude="" observations="Loscostosdeescalamientoestansujetosalmodelodelicenciamientoacordadoconelproveedor"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="11" impactVariable="Soporte" maxMagnitude="" minMagnitude="" observations="Laofertadecompaniascapacesdebrindarsoporteasolucionescomercialesesamplia"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="11" impactVariable="Documentacion" maxMagnitude="" minMagnitude="" observations="Elproveedorofrecerasuficientedocumentacionymanualessobreelusodelproducto"/>
+          			<featureAttribute dimension="Tiempo" dimensionID="11" impactVariable="Implementacion" maxMagnitude="36" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="11" impactVariable="" maxMagnitude="80000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Consideracion" dimensionID="12" impactVariable="Capacitacion" maxMagnitude="20000" minMagnitude="" observations="Elfabricanteporlogeneralentregaramanualesdocumentacionytendraplanespersonalizadosdecapacitacionyeventualmentepodraofrecerunplandeimplementaciongradual"/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="FlujodeCaja" maxMagnitude="" minMagnitude="" observations="ExisteundesembolsoinicialimportantequeafectaelFCLydesembolsosanualesenlicenciamiento"/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Configuracion" maxMagnitude="50000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Personalizacion" maxMagnitude="75000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Consideracion" dimensionID="12" impactVariable="Flexibilidad" maxMagnitude="" minMagnitude="" observations="Lasolucionimplementadatieneunlimitedepersonalizacionyflexibilizacionquevaatadaalascaracteristicasdecadaproductoenocasioneslaempresadebecambiarsusesquemasdetrabajoparaadaptarsealaherramientaseleccionada"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="12" impactVariable="Proveedores" maxMagnitude="" minMagnitude="" observations="Alescogerunasolucionlaempresaquedasujetaaloscambiosquelaempresacreadoraquierahacerenelproductoactualizacionescontinuidadyterminosdeservicio"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="12" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Eltiempodeimplementacionesmayoraldeunasolucionopensource"/>
+          			<featureAttribute dimension="Consideracion" dimensionID="12" impactVariable="Proveedores" maxMagnitude="" minMagnitude="" observations="Laofertadeproveedoresdesolucionescomercialesesmayoraladeproveedoresopensource"/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+        		</feature>
+				<feature extended="true" mandatory="true" name="OpenSource">
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Soporte" maxMagnitude="10000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Licenciamiento" maxMagnitude="500" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Adquisicion" maxMagnitude="500" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Personalizacion" maxMagnitude="75000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Configuracion" maxMagnitude="100000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="12" impactVariable="Mantenimientoyactualizaciones" maxMagnitude="5000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Ventaja" dimensionID="13" impactVariable="Proveedores" maxMagnitude="" minMagnitude="" observations="Laempresanoquedasujetaaunsoloproveedor"/>
+          			<featureAttribute dimension="Costos" dimensionID="13" impactVariable="Escalamiento" maxMagnitude="" minMagnitude="" observations="Loscostosdeescalamientoestansujetosalmodelodelicenciamientoacordadoconelproveedor"/>
+          			<featureAttribute dimension="Desventaja" dimensionID="14" impactVariable="Soporte" maxMagnitude="" minMagnitude="" observations="Noexisteuncontratodesoportenigarantiadelfabricante"/>
+          			<featureAttribute dimension="Ventaja" dimensionID="14" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Mayorvalor_precio"/>
+          			<featureAttribute dimension="Desventaja" dimensionID="14" impactVariable="Documentacion" maxMagnitude="" minMagnitude="" observations="Laposibilidaddedisponerdedocumentacioncentralizadafacildeusarypersonalizadaesminima"/>
+          			<featureAttribute dimension="Desventaja" dimensionID="14" impactVariable="Mantenimientoyactualizaciones" maxMagnitude="" minMagnitude="" observations="Lasactualizacionesestansujetasaldesarrollodelacomunidadopensource"/>
+          			<featureAttribute dimension="Costos" dimensionID="14" impactVariable="" maxMagnitude="75000" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Tiempo" dimensionID="14" impactVariable="Implementacion" maxMagnitude="36" minMagnitude="" observations=""/>
+          			<featureAttribute dimension="Costos" dimensionID="14" impactVariable="FlujodeCaja" maxMagnitude="" minMagnitude="" observations="NoexistedesembolsoinicialrepresentativoporloquenoseafectaelcapitaldetrabajoyalinvertirestedineroalTCsetieneunaumentoenelVPNincrementalfrentealasolucioncomercial"/>
+          			<featureAttribute dimension="Costos" dimensionID="14" impactVariable="Capacitacion" maxMagnitude="20000" minMagnitude="" observations="Elfabricanteoproveedordeladistribuciondelsoftwareopensourcenonecesariamentecontaraconprogramasdecapacitacionoentregaradocumentaciondetallada"/>
+          			<featureAttribute dimension="Desventaja" dimensionID="19" impactVariable="" maxMagnitude="" minMagnitude="" observations="Porlogeneralsepresentancostosocultosdeintegracionconotrossistemas"/>
+        			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La instalación, configuración y puesta a punto de un sistema Open Source, puede llegar a ser muy complicada (directamente proporcional a la complejidad de sistema a implantar) y consumir mucho tiempo, e incluso derivar en una implementación fallida."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Adiciones y/o configuraciones adicionales en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Si el producto deja de ser alimentado, las funcionalidades quedaran limitadas hasta el punto en que hubo desarrollo."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Cualquier error que aparezca,  o cualquier funcionalidad de mejora deberá ser resuelta de manera directa por la empresa (Con unos costos de desarrollo asociados)."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Cualquier inconveniente, duda o resultado inesperado que aparezca, debe ser solucionado por la empresa de manera directa o esperar que alguien más lo solucione y lo comparta, muchas veces soportados en medios informales en línea como foros, comunidades de desarrollo y demás, que no ofrecen ninguna garantía y no tienen ningún tipo de obligación para solucionar los problemas."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="En países con regulaciones en temas de derechos de autor, el incumplimiento o violación de dichas regulaciones puede acarrear sanciones de orden económico o incluso penal para quienes usen o distribuyan el software con código no autorizado."/>
+          			<featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependiendo del tipo de licencia de la solución Open Source, la inclusión de módulos y modificaciones propias, así sean de carácter privado y desarrolladas por la empresa, debe respetar los principios del software libre y la ley obliga a liberarlas al público, por ende la solución no sería de la empresa, sino sería pública."/>
+        		</feature>
+			</alt>
+      		<alt mandatory="true" name="ModelodeDespliegue">
+				<feature extended="true" mandatory="true" name="OnPremise">
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Licenciamiento" maxMagnitude="200000" minMagnitude="" observations="Dependiendodelproveedorydeltipodesolucionanualmentesegenerarancostosdelicenciamiento"/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Costoinicial" maxMagnitude="200000" minMagnitude="" observations="Dependiendodelsistemayproveedorseleccionadossedebeincurrirenuncostodeadquisicion"/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Mantenimientoyactualizaciones" maxMagnitude="50000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Soporte" maxMagnitude="5000" minMagnitude="" observations="Loscostosporsoportemensualestaranacargodelaempresa"/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Configuracion" maxMagnitude="50000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Personalizacion" maxMagnitude="75000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="" maxMagnitude="80000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Consideracion" dimensionID="20" impactVariable="Infraestructura" maxMagnitude="500000" minMagnitude="" observations="Laempresanecesariamentetendraqueincurrirencostosdeadquisicionomantenimientodeinfraestructura"/>
+          <featureAttribute dimension="Consideracion" dimensionID="20" impactVariable="Seguridad" maxMagnitude="" minMagnitude="" observations="Laempresapuedecontrolar100porcientoelaccesoalainformacionyseguridaddelamisma"/>
+          <featureAttribute dimension="Consideracion" dimensionID="20" impactVariable="Soporte" maxMagnitude="" minMagnitude="" observations="Posibilidaddetenermejorcontrolsobrelasactualizacionesalsofwareylasimplicacionesdenegocioparalaempresa"/>
+          <featureAttribute dimension="Consideracion" dimensionID="20" impactVariable="Mantenimientoyactualizaciones" maxMagnitude="" minMagnitude="" observations="Posiblidaddetenermejorcontrolsobrelainfraestructuraynivelesdeservicio"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de dinero por la inversión en software, hardware y personal que tendrá un uso limitado o nulo, o que no soporte completamente las operaciones del negocio."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones adicionales en reparación y configuración de infraestructura de TI afectada."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de información vital para la organización."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Problemas legales por el incumplimiento de requerimientos de seguridad con los clientes."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones adicionales en reparación y configuración de infraestructura de TI afectada."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de información vital para la organización."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Interrupción no deseada en la operación del negocio."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones adicionales en reparación y configuración de infraestructura de TI afectada."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de información vital para la organización."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Interrupción no deseada en la operación del negocio."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Interrupción en las operaciones del negocio."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Frustración para clientes y usuarios por la imposibilidad de utilizar el sistema."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Incumplimiento de acuerdos de nivel de servicios por la falta de disponibilidad."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Es imposible controlar picos no contemplados de operación."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Los niveles de disponibilidad pueden verse afectados negativamente, y el consecuente incumplimiento de acuerdos de nivel de servicios."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="SoftwarecomoservicioSaaS">
+          <featureAttribute dimension="Ventaja" dimensionID="20" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Sujetoadisponibilidaddeconexionainternet"/>
+          <featureAttribute dimension="Consideracion" dimensionID="20" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Noexistencostosdelicenciamientosoporteconfiguracionmantenimientoniactualizacion"/>
+          <featureAttribute dimension="Costos" dimensionID="20" impactVariable="Arrendamiento" maxMagnitude="2000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Ventaja" dimensionID="21" impactVariable="Seguridad" maxMagnitude="" minMagnitude="" observations="Noexistecontrolsobrelaseguridaddelainformacion"/>
+          <featureAttribute dimension="Ventaja" dimensionID="21" impactVariable="Disponibilidad" maxMagnitude="" minMagnitude="" observations="Sujetaalosacuerdosdenivelesdeservicioqueseestablezcanconelproveedor"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="En algunos casos, se requiere de un alto nivel de parametrización en las funcionalidades del sistema, para cubrir todos los requerimientos del negocio, de no ser así, la solución no da el valor de negocio suficiente y quedan partes del negocio sin soporte tecnológico."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para soporte técnico no contemplado en los acuerdos iniciales de soporte."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Fallas en la disponibilidad del sistema."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Intermitencia en el servicio."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Afectación directa a ## con los clientes en caso de que existan."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Baja productividad de la organización (especialmente si el sistema es misional o soporta de forma importante la operación del negocio)."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de información vital para el negocio por la falta de respaldo del proveedor de la solución SaaS."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Incumplimiento de acuerdos de nivel de servicio con los clientes, si el proveedor falla."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida o modificación no autorizada de información sensible al negocio (lo que lleva a inconsistencias en los reportes y operación con información no confiable)."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Interceptación no autorizada de los canales de comunicación entre la empresa y su proveedor de SaaS."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad de realizar trazabilidad y estudios sobre la información propios de la organización."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Desconocimiento del lugar donde es almacenada (problemas legales de jurisdicción, ¿quién es el verdadero dueño de la información?)."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Cualquier tipo de tratamiento se debe realizar limitado a lo que el proveedor ofrezca."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Si la seguridad del proveedor no es la adecuada, se pueden presentar problemas con la información como: pérdida, modificación y/o acceso no autorizado."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Bajos niveles de confidencialidad."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Fallas en la disponibilidad del sistema."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La implantación de una solución SaaS, que no facilita la integración con los sistemas actuales de la empresa, implica que se deben incurrir en costos de personal y tecnología para conectar las aplicaciones legado, con la nueva solución propuesta."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="InfraestructuracomoservicioIaaS">
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Maximoniveldeescalabilidadelcostoytiempomarginaldeincrementarlacapacidaddeprocesamientoeselminimoposible"/>
+          <featureAttribute dimension="Costos" dimensionID="20" impactVariable="Arrendamiento" maxMagnitude="400" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Tiempo" dimensionID="21" impactVariable="Implementacion" maxMagnitude="2" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Consideracion" dimensionID="21" impactVariable="Seguridad" maxMagnitude="" minMagnitude="" observations="Noexistecontrolsobreelaccesoalosservidoresnisobrelaseguridaddelosmismos"/>
+          <featureAttribute dimension="Consideracion" dimensionID="21" impactVariable="Proveedores" maxMagnitude="" minMagnitude="" observations="RequiereundepartamentodeTIcapazdeevaluarlacapacidadtecnologicaylosretosquesuponelaimplentaciondelsistema"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad de realizar trazabilidad y estudios sobre la información propios de la organización."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Desconocimiento del lugar donde es almacenada (problemas legales de jurisdicción, ¿quién es el verdadero dueño de la información?)."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Cualquier tipo de tratamiento se debe realizar limitado a lo que el proveedor ofrezca."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para soporte técnico no contemplado en los acuerdos iniciales de soporte."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de información vital para el negocio por la falta de respaldo del proveedor de la solución IaaS."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Incumplimiento de acuerdos de nivel de servicio con los clientes, si el proveedor falla."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Si la seguridad del proveedor no es la adecuada, se pueden presentar problemas con la información como: pérdida, modificación y/o acceso no autorizado, bajos niveles de confidencialidad, fallas en la disponibilidad del sistema."/>
+        </feature>
+				</alt>
+      <alt mandatory="true" name="ModelodeImplementacion">
+					<feature extended="true" mandatory="true" name="BigBang">
+          <featureAttribute dimension="Costos" dimensionID="21" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Estemodelorepresentalaalternativademenorcosto"/>
+          <featureAttribute dimension="Consideracion" dimensionID="21" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Todaslastareasdeconfiguracionpersonalizacionintegracionycapacitaciondebenestarterminadasparalafechadellanzamiento"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mayor probabilidad de aparición de fallas o errores en el sistema e incremento de costos para corregir y mitigar las fallas en plena operación."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de productividad si el nuevo sistema reemplaza a uno previamente existente, pues el tiempo de entrenamiento y la interacción directa de los usuarios con un sistema completamente nuevo requiere superar una curva de aprendizaje."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Incremento en costos de soporte."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de productividad si el funcionamiento del sistema no cumple con los requerimientos mínimos de operación."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Baja en la moral y eficacia de los empleados."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Implementacionporfases">
+          <featureAttribute dimension="Consideracion" dimensionID="21" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Eltiempodeimplementacionaumenta"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Incremento en costos de implementación (por fases intermedias mal definidas, o inclusive innecesarias)."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de la credibilidad en el departamento de TI si el proceso se estanca y no presenta resultados."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Detrimento de la operación."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Problemas de comunicación entre departamentos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Fallas en la disponibilidad de la información y/o de funcionalidades de negocio."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para el soporte y mantenimiento de los sistemas que operan en paralelo."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de requerimientos adicionales para mantener los sistemas sincronizados."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mayor carga laboral para los empleados y su consecuente costo adicional."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Incremento en costos de almacenamiento."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Instalaciones y redes saturadas por la operación de sistemas en simultáneo."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Problemas con la administración de activos de software."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Implementacionporprocesos">
+          <featureAttribute dimension="Costos" dimensionID="21" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Presentaelmejorbalanceentrecostotiempoybeneficio"/>
+          <featureAttribute dimension="Consideracion" dimensionID="21" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Serequierealtoconocimientodelnegocioypodrianecesitarseunaconsultoriaadicionalparavalidaroreplantearalgunosprocesosdenegocio"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Retrasos en la implementación y puesta a punto de componentes del sistema."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad de usar funcionalidades ya implementadas pero con dependencias funcionales."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para acelerar o establecer proyectos complementarios."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Incremento en el costo total de implementación, pues cada proyecto individual requiere de fases de entrenamiento y pruebas por separado."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Los requerimientos necesarios en orden de importancia o retorno a la inversión no se implementan, y se retrasa el proceso de mejoramiento y aprovechamiento de las ventajas resultado de la implementación del sistema."/>
+        </feature>
+				</alt>
+      <alt mandatory="true" name="Mantenimiento">
+					<feature extended="true" mandatory="true" name="Contratoconelproveedor">
+          <featureAttribute dimension="Costos" dimensionID="22" impactVariable="Mantenimiento_1" maxMagnitude="800" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Consideracion" dimensionID="22" impactVariable="Mantenimiento_1" maxMagnitude="" minMagnitude="" observations="Uncontratoconelproveedoraseguraelconocimientodelaimplementacionyreducelostiemposnecesariosparadarrespuestaainconvenientesactualizacionesorequirimientosdemantenimiento"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para soporte técnico no contemplado en los acuerdos iniciales de soporte."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Contratoconunproveedorespecializado">
+          <featureAttribute dimension="Consideracion" dimensionID="22" impactVariable="Mantenimiento_1" maxMagnitude="" minMagnitude="" observations="Eltiempoderespuestaanteunrequerimientopuedesersuperiorpordesconocimientodelaimplementacion"/>
+          <featureAttribute dimension="Costos" dimensionID="22" impactVariable="Mantenimiento_1" maxMagnitude="950" minMagnitude="" observations=""/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones importantes para contratar un proveedor especializado, en la mayoría de los casos, provenientes del exterior."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Mantenimientoporcuentapropia">
+          <featureAttribute dimension="RecursosHumanos" dimensionID="22" impactVariable="Mantenimiento_1" maxMagnitude="10" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="22" impactVariable="Mantenimiento_1" maxMagnitude="500" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Consideracion" dimensionID="23" impactVariable="Mantenimiento_1" maxMagnitude="" minMagnitude="" observations="Ladecisionimplicalabusquedadeunequipocalificadoydimensionadodeacuerdoconeltamanioycomplejidaddelaimplementacion"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Mantenimiento de mala calidad o insuficiente para lo requerido por el sistema."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Sincontratodemantenimiento">
+          <featureAttribute dimension="Consideracion" dimensionID="23" impactVariable="Mantenimiento_1" maxMagnitude="" minMagnitude="" observations="Ladecisionsuprimeuncostoenelcortoplazoperoimplicaunriesgoquepuedeimpactarlaoperaciondelprocesodenegocioimplementadoyasilosingresosdelaempresa"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Multas por incumplimientos de acuerdos de servicio y regulaciones adicionales, en algunos casos hasta el punto de responder penalmente."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos adquiridos por la presencia de una falla que debe ser resuelta cuanto antes."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de credibilidad ante los clientes, y mala calidad en los servicios prestados."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos adquiridos por la presencia de una falla, que debe ser resuelta cuanto antes."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de credibilidad ante los clientes, y mala calidad en los servicios prestados."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales relacionados con la solución de problemas de manera prioritaria y de emergencia."/>
+        </feature>
+				</alt>
+      <alt mandatory="true" name="ModelodeSeleccion">
+					<feature extended="true" mandatory="true" name="RFP_Requestforproposal">
+          <featureAttribute dimension="RecursosHumanos" dimensionID="23" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Posibilidadderecibirofertasvariadasylograrpoderdenegociacionfrenteaproveedores"/>
+          <featureAttribute dimension="Costos" dimensionID="23" impactVariable="Implementacion" maxMagnitude="300" minMagnitude="" observations="Representalaopciondemenorcosto"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La selección de una alternativa incorrecta, motivada por una respuesta incorrecta a la propuesta definida."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos en la implementación si la elección errónea del sistema, obliga a complementar sus funcionalidades en proyectos aparte o a cancelar por completo el proyecto."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Consultoriaexterna">
+          <featureAttribute dimension="Costos" dimensionID="23" impactVariable="Costoinicial" maxMagnitude="100000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Consideracion" dimensionID="23" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Requiereexperienciapreviaenimplementacionessimilaresycasosdeexitoquesoportenlaexperiencia"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La visión del negocio no es suficiente para tomar la mejor decisión para la organización, por ende, la alternativa seleccionada puede no ser la más adecuada."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos para ajustar o reemplazar la solución seleccionada de manera incorrecta, o realizar el proceso de selección nuevamente, teniendo en cuenta aspectos pasados por alto en la primera selección."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Evaluacioninterna">
+          <featureAttribute dimension="Consideracion" dimensionID="18" impactVariable="" maxMagnitude="" minMagnitude="" observations="RequiereunagenerenciadeTIresponsabledeevaluarlasalternativaseintegrarlasdentrodelavisionestrategicadelaempresa"/>
+          <featureAttribute dimension="Costos" dimensionID="18" impactVariable="Costoinicial" maxMagnitude="500" minMagnitude="" observations=""/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos para ajustar o reemplazar la solución seleccionada de manera incorrecta, o realizar el proceso de selección nuevamente, teniendo en cuenta aspectos pasados por alto en la primera selección."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La selección de una alternativa motivada por intereses ajenos al beneficio de la organización, puede derivar en que la alternativa seleccionada puede no ser la más adecuada."/>
+        </feature>
+				</alt>
+      <alt mandatory="true" name="Plataforma">
+					<feature extended="true" mandatory="true" name="Sistemaempresarialbasadoenlamismaplataformatecnologica">
+          <featureAttribute dimension="Consideracion" dimensionID="18" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Seevitancostostiempoyrecursoshumanosadicionalesparaintegrarlanuevaplataformaalossistemasyprocesosdenegocioexistentes"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Las plataformas inestables o sin soporte, son más vulnerables a fallas de seguridad, inconsistencia de la información, y comportamientos inesperados, que pueden afectar la operación."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Un ataque exitoso en uno de los sistemas, es extensible transversalmente a los demás, por ende una vulnerabilidad explotada puede parar totalmente la operación de todos los sistemas."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Sistemaempresarialbasadoenunaplataformadiferente">
+          <featureAttribute dimension="Tiempo" dimensionID="18" impactVariable="" maxMagnitude="" minMagnitude="" observations="Serequieretiempoadicionalparaintegrarelnuevosistemaalossistemasexistentes"/>
+          <featureAttribute dimension="Costos" dimensionID="18" impactVariable="Capacitacion" maxMagnitude="" minMagnitude="" observations="SerequierecapacitacionalpersonaldeTIyalosusuariosenlanuevaplataforma"/>
+          <featureAttribute dimension="Tiempo" dimensionID="18" impactVariable="Capacitacion" maxMagnitude="" minMagnitude="" observations="SerequierecapacitacionalpersonaldeTIyalosusuariosenlanuevaplataforma"/>
+          <featureAttribute dimension="Costos" dimensionID="18" impactVariable="Mantenimiento_1" maxMagnitude="" minMagnitude="" observations="Ladecisionpuedeimplicarmantenimientoadicionalespecializado"/>
+          <featureAttribute dimension="Costos" dimensionID="18" impactVariable="Adquisicion" maxMagnitude="100000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="18" impactVariable="Integracion_1" maxMagnitude="500" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Soporte" maxMagnitude="" minMagnitude="" observations="Ladecisionpuedeimplicarsoporteadicionalespecializado"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Inversiones adicionales en interfaces y mecanismos de comunicación entre sistemas."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de migración y configuración adicional en algunos casos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para el reclutamiento de nuevo personal, o capacitación del personal existente."/>
+        </feature>
+				</alt>
+      <alt mandatory="true" name="Integracion">
+					<feature extended="true" mandatory="true" name="Middleware">
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Elmiddlewarereducelostiemposdeintegracionyhaceusodemejorespracticasyestandaresdelaindustria"/>
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="FlujodeCaja" maxMagnitude="" minMagnitude="" observations="Aumentaloscostosanualesdetodalaimplementacionyaumentaelcostototaldepropiedad"/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Mantenimientoyactualizaciones" maxMagnitude="600" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Configuracion" maxMagnitude="500" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Adquisicion" maxMagnitude="15000" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Licenciamiento" maxMagnitude="750" minMagnitude="" observations=""/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La inversión realizada en la compra y configuración del middleware no se aprovecha completamente, y su relación con el retorno esperado se verá afectada por las funcionalidades que no están siendo utilizadas."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Desarrollopropio">
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Permiteelmayorgradodeflexibilidadycontrol"/>
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Implementacion" maxMagnitude="500" minMagnitude="" observations=""/>
+          <featureAttribute dimension="RecursosHumanos" dimensionID="19" impactVariable="Implementacion" maxMagnitude="10" minMagnitude="" observations=""/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para el reclutamiento de nuevo personal, o capacitación del personal existente."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos para realizar ajustes o configuraciones adicionales para mejorar o corregir la calidad de las soluciones desarrolladas."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Baja en el rendimiento de los sistemas que utilizan el mecanismo de integración recien desarrollado."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Proveedor">
+          <featureAttribute dimension="Costos" dimensionID="19" impactVariable="Implementacion" maxMagnitude="500" minMagnitude="" observations=""/>
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="Implementacion" maxMagnitude="" minMagnitude="" observations="Requierelaadecuadaselecciondeunproveedorconaltoconocimientodelasherramientasyprocesosdenegocioinvolucrados"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos por la necesidad de realizar ajustes en la solución adquirida o realizar nuevas inversiones en TI, para garantizar el soporte total de los requerimientos funcionales mínimos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Costos adicionales para reparar fallas u obtener soporte adicional después de la implementación de la solución de integración."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+        </feature>
+				</alt>
+      <alt mandatory="true" name="Financiacion">
+					<feature extended="true" mandatory="true" name="RecursosPropios">
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="FlujodeCaja" maxMagnitude="" minMagnitude="" observations="Seevitanloscostosasociadosadiferentestiposdefinanciacion"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Necesidad de replantear los objetivos y especificaciones del proyecto de inversión."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Falta o disminución en la disponibilidad de recursos para las actividades core del negocio."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Disminución en la capacidad de reacción ante eventos financieros adversos."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Credito">
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="FlujodeCaja" maxMagnitude="" minMagnitude="" observations="Losrecursospropiosliberadosporcuentadelafinanciacionpuedendestinarseainversionesaunatasamayorquelatasadefinanciacion"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Sobrecostos generados por las elevadas tasas de interés, y/o el tipo de crédito adquirido."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Dificultad para efectuar los pagos periódicos."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La posibilidad de incurrir en el pago de interéses de mora."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Pérdida de activos para cubrir las deudas adquiridas por venta y/o embargo."/>
+          <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="Impacto en la reputación e historial financiero de la organización."/>
+        </feature>
+					<feature extended="true" mandatory="true" name="Leasing">
+          <featureAttribute dimension="Consideracion" dimensionID="19" impactVariable="FlujodeCaja" maxMagnitude="" minMagnitude="" observations="Sujetoalascondicionesdelcontratodeleasingoperativoestablecidoporlaentidadfinanciera"/>
+        <featureAttribute dimension="Riesgos" dimensionID="23" impactVariable="" maxMagnitude="0.0" minMagnitude="0.0" observations="La necesidad de escoger el sistema o solución a implementar, bajo una oferta muy reducida de alternativas y bajo las condiciones impuestas por los proveedores del contrato de leasing operativo, que no se adecuan a los requerimientos de la organización."/>
+        </feature>
+				</alt>
+    </and>
+  </struct>
+  <constraints>
+    <rule>
+				<disj>
+					<not>
+						<var>Gestiondecontactos</var>
+					</not>
+					<var>ERP_Modulodeclientes</var>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Ajustarprocesosdeflujodetrabajo</var>
+					</not>
+					<disj>
+						<not>
+							<var>Mejorarcapacidadderespuesta</var>
+						</not>
+						<var>ERP_Modulodegestiondeabastecimiento</var>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Gestionarpresupuestos</var>
+					</not>
+					<disj>
+						<not>
+							<var>Crearyconsolidarinformes</var>
+						</not>
+						<disj>
+							<not>
+								<var>Buscartendenciasyrelaciones</var>
+							</not>
+							<disj>
+								<not>
+									<var>Compartirconocimiento</var>
+								</not>
+								<var>ERP_Modulodeinteligenciadenegocio</var>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Segmentarydepurarclientes</var>
+					</not>
+					<disj>
+						<not>
+							<var>Planificacionypresupuestosdemercadeo</var>
+						</not>
+						<disj>
+							<not>
+								<var>Gestiondedatosylistas</var>
+							</not>
+							<disj>
+								<not>
+									<var>Analisisdemarketing</var>
+								</not>
+								<disj>
+									<not>
+										<var>GestiondeCampanias</var>
+									</not>
+									<disj>
+										<not>
+											<var>Facilitartareasdemercadeoypublicidad</var>
+										</not>
+										<disj>
+											<not>
+												<var>Gestionderespuestasyclientespotenciales</var>
+											</not>
+											<var>CRM_Modulomarketing</var>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Reducirciclosdeventas</var>
+					</not>
+					<disj>
+						<not>
+							<var>Aumentartasasdecierredeventas</var>
+						</not>
+						<disj>
+							<not>
+								<var>Mejorarretenciondeclientes</var>
+							</not>
+							<disj>
+								<not>
+									<var>Implementarnuevoprocesodeventas</var>
+								</not>
+								<var>CRM_ModuloVentas</var>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Gestionarinformaciondeclientes</var>
+					</not>
+					<disj>
+						<not>
+							<var>Gestiondecasosdeclientes</var>
+						</not>
+						<disj>
+							<not>
+								<var>Historialdeserviciosdeclientes</var>
+							</not>
+							<disj>
+								<not>
+									<var>Aumentarbasedeclientes</var>
+								</not>
+								<disj>
+									<not>
+										<var>Implementarnuevoprocesodeatencionalcliente</var>
+									</not>
+									<disj>
+										<not>
+											<var>Mejorarconocimientodelcliente</var>
+										</not>
+										<disj>
+											<not>
+												<var>Medirsatisfacciondelconsumidor</var>
+											</not>
+											<var>CRM_Modulodeclientes</var>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Controlsobrerecursoshumanos</var>
+					</not>
+					<disj>
+						<not>
+							<var>Nuevosprocesosderecursoshumanos</var>
+						</not>
+						<disj>
+							<not>
+								<var>Reclutamiento</var>
+							</not>
+							<disj>
+								<not>
+									<var>Biodata_hojasdevida</var>
+								</not>
+								<disj>
+									<not>
+										<var>Analisisdecargos_estructuraorganizacional</var>
+									</not>
+									<disj>
+										<not>
+											<var>Nominayadministraciondesalarios</var>
+										</not>
+										<disj>
+											<not>
+												<var>Educacionycapacitacion</var>
+											</not>
+											<disj>
+												<not>
+													<var>Saludocupacional</var>
+												</not>
+												<disj>
+													<not>
+														<var>Modelamientodeprocesosyorganigramas</var>
+													</not>
+													<var>ERP_Modulorecursoshumanos</var>
+												</disj>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Nuevosprocesosfinancieros</var>
+					</not>
+					<disj>
+						<not>
+							<var>Implementarcontrolessobreprocesosfinancieros</var>
+						</not>
+						<disj>
+							<not>
+								<var>Gestioncontable</var>
+							</not>
+							<disj>
+								<not>
+									<var>Manejodecuentasporpagar_Proveedores</var>
+								</not>
+								<disj>
+									<not>
+										<var>Sistemasdecosteo</var>
+									</not>
+									<disj>
+										<not>
+											<var>Administraciondeactivosfijos</var>
+										</not>
+										<disj>
+											<not>
+												<var>Manejodeconciliacionesbancarias</var>
+											</not>
+											<disj>
+												<not>
+													<var>Controldeinversiones</var>
+												</not>
+												<disj>
+													<not>
+														<var>Manejodeobligacionesfinancieras</var>
+													</not>
+													<disj>
+														<not>
+															<var>Tesoreria</var>
+														</not>
+														<disj>
+															<not>
+																<var>Contabilidadanalitica</var>
+															</not>
+															<disj>
+																<not>
+																	<var>Controlyadministraciondelpresupuesto</var>
+																</not>
+																<disj>
+																	<not>
+																		<var>Manejodeactivosdecapital</var>
+																	</not>
+																	<var>ERP_Modulofinanciero</var>
+																</disj>
+															</disj>
+														</disj>
+													</disj>
+												</disj>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<var>Manejodeinventarios</var>
+					<disj>
+						<not>
+							<var>Manejodealmacen</var>
+						</not>
+						<disj>
+							<not>
+								<var>Gestiondecompras</var>
+							</not>
+							<disj>
+								<not>
+									<var>Gestiondeactivosfijos</var>
+								</not>
+								<disj>
+									<not>
+										<var>Comercioexterior</var>
+									</not>
+									<disj>
+										<not>
+											<var>Seguros</var>
+										</not>
+										<var>ERP_Moduloadministrativo</var>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Manejodeordenesdeproduccion</var>
+					</not>
+					<disj>
+						<not>
+							<var>Manejodeordenesdecompra</var>
+						</not>
+						<disj>
+							<not>
+								<var>Planificaciondenecesidadesdecapacidad</var>
+							</not>
+							<disj>
+								<not>
+									<var>Planificaciondesuministros</var>
+								</not>
+								<disj>
+									<not>
+										<var>Disminuirtiemposdeentrega</var>
+									</not>
+									<disj>
+										<not>
+											<var>Integracionconproveedores</var>
+										</not>
+										<disj>
+											<not>
+												<var>Gestiondeproveedores</var>
+											</not>
+											<disj>
+												<not>
+													<var>Administraciondemateriasprimas</var>
+												</not>
+												<disj>
+													<not>
+														<var>Gestiondebodega</var>
+													</not>
+													<disj>
+														<not>
+															<var>Realizarcontroldecostos</var>
+														</not>
+														<disj>
+															<not>
+																<var>Administraciondepedidosydespachos</var>
+															</not>
+															<var>ERP_Modulodeproduccion</var>
+														</disj>
+													</disj>
+												</disj>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Ajustarprocesosdeflujodetrabajo</var>
+					</not>
+					<disj>
+						<not>
+							<var>Mejorarcapacidadderespuesta</var>
+						</not>
+						<disj>
+							<not>
+								<var>Planearygestionarcapacidaddebodegajeyalmacenamiento</var>
+							</not>
+							<disj>
+								<not>
+									<var>Gestiondetransportedemercancia</var>
+								</not>
+								<disj>
+									<not>
+										<var>Logisticadetransporteinternacional</var>
+									</not>
+									<disj>
+										<not>
+											<var>Gestionderelacionconproveedores</var>
+										</not>
+										<disj>
+											<not>
+												<var>Gestiondelademanda</var>
+											</not>
+											<var>SCM_Sistemadegestiondeabastecimiento</var>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>GestiondeCampanias</var>
+					</not>
+					<disj>
+						<not>
+							<var>Gestionarinformaciondeclientes</var>
+						</not>
+						<disj>
+							<not>
+								<var>Historialdeserviciosdeclientes</var>
+							</not>
+							<disj>
+								<not>
+									<var>Organizarrecursosdeservicio</var>
+								</not>
+								<disj>
+									<not>
+										<var>Facturacionydevolucion</var>
+									</not>
+									<disj>
+										<not>
+											<var>Cartera</var>
+										</not>
+										<disj>
+											<not>
+												<var>Administraciondepreciosydescuentos</var>
+											</not>
+											<disj>
+												<not>
+													<var>Administraciondepromociones</var>
+												</not>
+												<disj>
+													<not>
+														<var>Administraciondecuotaseincentivos</var>
+													</not>
+													<disj>
+														<not>
+															<var>Administraciondevisitacomercial</var>
+														</not>
+														<disj>
+															<not>
+																<var>Importacionesyexportaciones</var>
+															</not>
+															<disj>
+																<not>
+																	<var>Gestionarcontratosdeservicio</var>
+																</not>
+																<var>ERP_Marketingyventas</var>
+															</disj>
+														</disj>
+													</disj>
+												</disj>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+    <rule>
+				<disj>
+					<not>
+						<var>Presupuestarcostosytiempos</var>
+					</not>
+					<disj>
+						<not>
+							<var>Automatizarlafacturacion</var>
+						</not>
+						<disj>
+							<not>
+								<var>Predecirdisponibilidades</var>
+							</not>
+							<disj>
+								<not>
+									<var>Seguimientodecostosyconsumos</var>
+								</not>
+								<disj>
+									<not>
+										<var>Planificarcapacidades</var>
+									</not>
+									<var>ERP_Modulodegestiondeproyectos</var>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+  </constraints>
+  <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+  <comments/>
+  <featureOrder userDefined="false"/>
+  <attributes>
+    <attribute dimension="Costos" frequency="" id="0" unitMeasure=""/>
+    <attribute dimension="Costos" frequency="" id="1" unitMeasure="Dolares"/>
+    <attribute dimension="Tiempo" frequency="" id="2" unitMeasure="Meses"/>
+    <attribute dimension="RecursosHumanos" frequency="" id="3" unitMeasure="Personas"/>
+    <attribute dimension="Costos" frequency="Mensual" id="4" unitMeasure="Dolares"/>
+    <attribute dimension="Costos" frequency="Anual" id="5" unitMeasure="Dolares"/>
+    <attribute dimension="Costos" frequency="Unavez" id="6" unitMeasure="Dolares"/>
+    <attribute dimension="Consideracion" frequency="" id="7" unitMeasure=""/>
+    <attribute dimension="RecursosHumanos" frequency="" id="8" unitMeasure="Personal"/>
+    <attribute dimension="Indicadores" frequency="" id="9" unitMeasure="Dolares"/>
+    <attribute dimension="Indicadores" frequency="" id="10" unitMeasure="Porcentaje"/>
+    <attribute dimension="Consideracion" frequency="" id="11" unitMeasure="Dolares"/>
+    <attribute dimension="Ventaja" frequency="" id="12" unitMeasure=""/>
+    <attribute dimension="Desventaja" frequency="" id="13" unitMeasure=""/>
+    <attribute dimension="Indicadores" frequency="" id="14" unitMeasure="Horas"/>
+    <attribute dimension="Indicadores" frequency="" id="15" unitMeasure="Dias"/>
+    <attribute dimension="Indicadores" frequency="" id="16" unitMeasure="Numero"/>
+    <attribute dimension="Tiempo" frequency="" id="17" unitMeasure=""/>
+    <attribute dimension="" frequency="" id="18" unitMeasure=""/>
+    <attribute dimension="Consideracion" frequency="Unavez" id="19" unitMeasure="Dolares"/>
+    <attribute dimension="Tiempo" frequency="" id="20" unitMeasure="Semanas"/>
+    <attribute dimension="Costos" frequency="Anual" id="21" unitMeasure="Porcentaje"/>
+    <attribute dimension="RecursosHumanos" frequency="" id="22" unitMeasure=""/>
+  <attribute dimension="Riesgos" frequency="None" id="23" unitMeasure="None"/>
+  </attributes>
+<configurations/>
+</featureModel>
