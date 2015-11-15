@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <featureModel chosenLayoutAlgorithm="1">
 	<struct>
-		<and mandatory="true" name="EstructuraDecisiones">
+		<and mandatory="true" name="InversionTI">
     		<or mandatory="true" name="MotivadoresdeNegocio">
 				<feature mandatory="true" name="Segmentarydepurarclientes"/>
 				<feature mandatory="true" name="Planificacionypresupuestosdemercadeo"/>
