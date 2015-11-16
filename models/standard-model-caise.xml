@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="4">
+		<struct>
+			<and mandatory="true" name="InversionTI">
+				<or mandatory="true" name="MotivadoresdeNegocio">
+					<feature mandatory="true" name="Segmentarydepurarclientes"/>
+					<feature mandatory="true" name="Analisisdemarketing"/>
+					<feature mandatory="true" name="GestiondeCampanias"/>
+					<feature mandatory="true" name="Reducirciclosdeventas"/>
+					<feature mandatory="true" name="Mejorarretenciondeclientes"/>
+					<feature mandatory="true" name="Mejorarconocimientodelcliente"/>
+					<feature mandatory="true" name="Implementarcontrolessobreprocesosfinancieros"/>
+					<feature mandatory="true" name="Controlyadministraciondelpresupuesto"/>
+					<feature mandatory="true" name="Manejodeinventarios"/>
+					<feature mandatory="true" name="Manejodealmacen"/>
+					<feature mandatory="true" name="Gestiondecompras"/>
+					<feature mandatory="true" name="Comercioexterior"/>
+					<feature mandatory="true" name="Disminuirtiemposdeentrega"/>
+					<feature mandatory="true" name="Integracionconproveedores"/>
+					<feature mandatory="true" name="Buscartendenciasyrelaciones"/>
+					<feature mandatory="true" name="Compartirconocimiento"/>
+					<feature mandatory="true" name="Predecirdisponibilidades"/>
+					<feature mandatory="true" name="Planificarcapacidades"/>
+					<feature mandatory="true" name="Gestiondelademanda"/>
+				</or>
+				<alt mandatory="true" name="SistemasEmpresariales">
+					<or mandatory="true" name="CRM_CustomerRelationshipManagement">
+						<feature mandatory="true" name="CRM_Modulomarketing"/>
+						<feature mandatory="true" name="CRM_ModuloVentas"/>
+						<feature mandatory="true" name="CRM_Modulodeclientes"/>
+					</or>
+					<or mandatory="true" name="ERP_Enterpriseresourceplanning">
+						<feature mandatory="true" name="ERP_Modulofinanciero"/>
+						<feature mandatory="true" name="ERP_Moduloadministrativo"/>
+						<feature mandatory="true" name="ERP_Modulodeproduccion"/>
+						<feature mandatory="true" name="ERP_Modulodeinteligenciadenegocio"/>
+						<feature mandatory="true" name="ERP_Marketingyventas"/>
+						<feature mandatory="true" name="ERP_Modulodegestiondeproyectos"/>
+					</or>
+					<feature mandatory="true" name="SCM_Sistemadegestiondeabastecimiento"/>
+				</alt>
+				<alt mandatory="true" name="NuevovsExistente">
+					<feature mandatory="true" name="Adquirirsistemanuevo"/>
+					<feature mandatory="true" name="Adaptarsistemaexistente"/>
+				</alt>
+				<alt mandatory="true" name="Tercerizacion">
+					<feature mandatory="true" name="Subcontratarpersonalizacion"/>
+					<feature mandatory="true" name="Subcontratarpartedeldesarrolloeintegracion"/>
+					<feature mandatory="true" name="Subcontratarlaadministraciondeunprocesodenegociocompleto"/>
+					<feature mandatory="true" name="Subcontratargerenciadelproyectodeimplementacion"/>
+				</alt>
+				<alt mandatory="true" name="TipodeSolucion">
+					<feature mandatory="true" name="Comercial"/>
+					<feature mandatory="true" name="OpenSource"/>
+				</alt>
+				<alt mandatory="true" name="ModelodeDespliegue">
+					<feature mandatory="true" name="OnPremise"/>
+					<feature mandatory="true" name="SoftwarecomoservicioSaaS"/>
+					<feature mandatory="true" name="InfraestructuracomoservicioIaaS"/>
+				</alt>
+				<alt mandatory="true" name="ModelodeImplementacion">
+					<feature mandatory="true" name="BigBang"/>
+					<feature mandatory="true" name="Implementacionporfases"/>
+					<feature mandatory="true" name="Implementacionporprocesos"/>
+				</alt>
+				<alt mandatory="true" name="Mantenimiento">
+					<feature mandatory="true" name="Contratoconelproveedor"/>
+					<feature mandatory="true" name="Contratoconunproveedorespecializado"/>
+					<feature mandatory="true" name="Mantenimientoporcuentapropia"/>
+					<feature mandatory="true" name="Sincontratodemantenimiento"/>
+				</alt>
+				<alt mandatory="true" name="ModelodeSeleccion">
+					<feature mandatory="true" name="RFP_Requestforproposal"/>
+					<feature mandatory="true" name="Consultoriaexterna"/>
+					<feature mandatory="true" name="Evaluacioninterna"/>
+				</alt>
+				<alt mandatory="true" name="Plataforma">
+					<feature mandatory="true" name="Sistemaempresarialbasadoenlamismaplataformatecnologica"/>
+					<feature mandatory="true" name="Sistemaempresarialbasadoenunaplataformadiferente"/>
+				</alt>
+				<alt mandatory="true" name="Integracion">
+					<feature mandatory="true" name="Middleware"/>
+					<feature mandatory="true" name="Desarrollopropio"/>
+					<feature mandatory="true" name="Proveedor"/>
+				</alt>
+				<alt mandatory="true" name="Financiacion">
+					<feature mandatory="true" name="RecursosPropios"/>
+					<feature mandatory="true" name="Credito"/>
+					<feature mandatory="true" name="Leasing"/>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<disj>
+					<not>
+						<var>Buscartendenciasyrelaciones</var>
+					</not>
+					<disj>
+						<not>
+							<var>Compartirconocimiento</var>
+						</not>
+						<var>ERP_Modulodeinteligenciadenegocio</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Segmentarydepurarclientes</var>
+					</not>
+					<disj>
+						<not>
+							<var>Analisisdemarketing</var>
+						</not>
+						<disj>
+							<not>
+								<var>GestiondeCampanias</var>
+							</not>
+							<var>CRM_Modulomarketing</var>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Reducirciclosdeventas</var>
+					</not>
+					<disj>
+						<not>
+							<var>Mejorarretenciondeclientes</var>
+						</not>
+						<var>CRM_ModuloVentas</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Mejorarconocimientodelcliente</var>
+					</not>
+					<var>CRM_Modulodeclientes</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Implementarcontrolessobreprocesosfinancieros</var>
+					</not>
+					<disj>
+						<not>
+							<var>Controlyadministraciondelpresupuesto</var>
+						</not>
+						<var>ERP_Modulofinanciero</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>Manejodeinventarios</var>
+					<disj>
+						<not>
+							<var>Manejodealmacen</var>
+						</not>
+						<disj>
+							<not>
+								<var>Gestiondecompras</var>
+							</not>
+							<disj>
+								<not>
+									<var>Comercioexterior</var>
+								</not>
+								<var>ERP_Moduloadministrativo</var>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Disminuirtiemposdeentrega</var>
+					</not>
+					<disj>
+						<not>
+							<var>Integracionconproveedores</var>
+						</not>
+						<var>ERP_Modulodeproduccion</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Gestiondelademanda</var>
+					</not>
+					<var>SCM_Sistemadegestiondeabastecimiento</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>GestiondeCampanias</var>
+					</not>
+					<var>ERP_Marketingyventas</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Predecirdisponibilidades</var>
+					</not>
+					<disj>
+						<not>
+							<var>Planificarcapacidades</var>
+						</not>
+						<var>ERP_Modulodegestiondeproyectos</var>
+					</disj>
+				</disj>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel chosenLayoutAlgorithm="1">
+	<struct>
+		<and mandatory="true" name="InversionTI">
+    		<or mandatory="true" name="MotivadoresdeNegocio">
+				<feature mandatory="true" name="Segmentarydepurarclientes"/>
+				<feature mandatory="true" name="Planificacionypresupuestosdemercadeo"/>
+				<feature mandatory="true" name="Gestiondedatosylistas"/>
+				<feature mandatory="true" name="Analisisdemarketing"/>
+				<feature mandatory="true" name="GestiondeCampanias"/>
+				<feature mandatory="true" name="Facilitartareasdemercadeoypublicidad"/>
+				<feature mandatory="true" name="Gestionderespuestasyclientespotenciales"/>
+				<feature mandatory="true" name="Reducirciclosdeventas"/>
+				<feature mandatory="true" name="Aumentartasasdecierredeventas"/>
+				<feature mandatory="true" name="Mejorarretenciondeclientes"/>
+				<feature mandatory="true" name="Implementarnuevoprocesodeventas"/>
+				<feature mandatory="true" name="Gestionarinformaciondeclientes"/>
+				<feature mandatory="true" name="Gestiondecasosdeclientes"/>
+				<feature mandatory="true" name="Historialdeserviciosdeclientes"/>
+				<feature mandatory="true" name="Aumentarbasedeclientes"/>
+				<feature mandatory="true" name="Implementarnuevoprocesodeatencionalcliente"/>
+				<feature mandatory="true" name="Mejorarconocimientodelcliente"/>
+				<feature mandatory="true" name="Medirsatisfacciondelconsumidor"/>
+				<feature mandatory="true" name="Controlsobrerecursoshumanos"/>
+				<feature mandatory="true" name="Nuevosprocesosderecursoshumanos"/>
+				<feature mandatory="true" name="Reclutamiento"/>
+				<feature mandatory="true" name="Biodata_hojasdevida"/>
+				<feature mandatory="true" name="Analisisdecargos_estructuraorganizacional"/>
+				<feature mandatory="true" name="Nominayadministraciondesalarios"/>
+				<feature mandatory="true" name="Educacionycapacitacion"/>
+				<feature mandatory="true" name="Saludocupacional"/>
+				<feature mandatory="true" name="Modelamientodeprocesosyorganigramas"/>
+				<feature mandatory="true" name="Nuevosprocesosfinancieros"/>
+				<feature mandatory="true" name="Implementarcontrolessobreprocesosfinancieros"/>
+				<feature mandatory="true" name="Gestioncontable"/>
+				<feature mandatory="true" name="Manejodecuentasporpagar_Proveedores"/>
+				<feature mandatory="true" name="Sistemasdecosteo"/>
+				<feature mandatory="true" name="Administraciondeactivosfijos"/>
+				<feature mandatory="true" name="Manejodeconciliacionesbancarias"/>
+				<feature mandatory="true" name="Controldeinversiones"/>
+				<feature mandatory="true" name="Manejodeobligacionesfinancieras"/>
+				<feature mandatory="true" name="Tesoreria"/>
+				<feature mandatory="true" name="Contabilidadanalitica"/>
+				<feature mandatory="true" name="Controlyadministraciondelpresupuesto"/>
+				<feature mandatory="true" name="Manejodeactivosdecapital"/>
+				<feature mandatory="true" name="Manejodeinventarios"/>
+				<feature mandatory="true" name="Manejodealmacen"/>
+				<feature mandatory="true" name="Gestiondecompras"/>
+				<feature mandatory="true" name="Gestiondeactivosfijos"/>
+				<feature mandatory="true" name="Comercioexterior"/>
+				<feature mandatory="true" name="Seguros"/>
+				<feature mandatory="true" name="Manejodeordenesdeproduccion"/>
+				<feature mandatory="true" name="Manejodeordenesdecompra"/>
+				<feature mandatory="true" name="Planificaciondenecesidadesdecapacidad"/>
+				<feature mandatory="true" name="Planificaciondesuministros"/>
+				<feature mandatory="true" name="Disminuirtiemposdeentrega"/>
+				<feature mandatory="true" name="Integracionconproveedores"/>
+				<feature mandatory="true" name="Gestiondeproveedores"/>
+				<feature mandatory="true" name="Administraciondemateriasprimas"/>
+				<feature mandatory="true" name="Gestiondebodega"/>
+				<feature mandatory="true" name="Realizarcontroldecostos"/>
+				<feature mandatory="true" name="Administraciondepedidosydespachos"/>
+				<feature mandatory="true" name="Gestiondecontactos"/>
+				<feature mandatory="true" name="Ajustarprocesosdeflujodetrabajo"/>
+				<feature mandatory="true" name="Mejorarcapacidadderespuesta"/>
+				<feature mandatory="true" name="Gestionarpresupuestos"/>
+				<feature mandatory="true" name="Crearyconsolidarinformes"/>
+				<feature mandatory="true" name="Buscartendenciasyrelaciones"/>
+				<feature mandatory="true" name="Compartirconocimiento"/>
+				<feature mandatory="true" name="Organizarrecursosdeservicio"/>
+				<feature mandatory="true" name="Facturacionydevolucion"/>
+				<feature mandatory="true" name="Cartera"/>
+				<feature mandatory="true" name="Administraciondepreciosydescuentos"/>
+				<feature mandatory="true" name="Administraciondepromociones"/>
+				<feature mandatory="true" name="Administraciondecuotaseincentivos"/>
+				<feature mandatory="true" name="Administraciondevisitacomercial"/>
+				<feature mandatory="true" name="Importacionesyexportaciones"/>
+				<feature mandatory="true" name="Gestionarcontratosdeservicio"/>
+				<feature mandatory="true" name="Presupuestarcostosytiempos"/>
+				<feature mandatory="true" name="Automatizarlafacturacion"/>
+				<feature mandatory="true" name="Predecirdisponibilidades"/>
+				<feature mandatory="true" name="Seguimientodecostosyconsumos"/>
+				<feature mandatory="true" name="Planificarcapacidades"/>
+				<feature mandatory="true" name="Planearygestionarcapacidaddebodegajeyalmacenamiento"/>
+				<feature mandatory="true" name="Gestiondetransportedemercancia"/>
+				<feature mandatory="true" name="Logisticadetransporteinternacional"/>
+				<feature mandatory="true" name="Gestionderelacionconproveedores"/>
+				<feature mandatory="true" name="Gestiondelademanda"/>
+			</or>
+      		<alt mandatory="true" name="SistemasEmpresariales">
+      			<or mandatory="true" name="CRM_CustomerRelationshipManagement">
+      				<feature mandatory="true" name="CRM_Modulomarketing"/>
+					<feature mandatory="true" name="CRM_ModuloVentas"/>
+					<feature mandatory="true" name="CRM_Modulodeclientes"/>
+				</or>
+				<or mandatory="true" name="ERP_Enterpriseresourceplanning">
+					<feature mandatory="true" name="ERP_Modulorecursoshumanos"/>
+					<feature mandatory="true" name="ERP_Modulofinanciero"/>
+					<feature mandatory="true" name="ERP_Moduloadministrativo"/>
+					<feature mandatory="true" name="ERP_Modulodeproduccion"/>
+					<feature mandatory="true" name="ERP_Modulodeclientes"/>
+					<feature mandatory="true" name="ERP_Modulodegestiondeabastecimiento"/>
+					<feature mandatory="true" name="ERP_Modulodeinteligenciadenegocio"/>
+					<feature mandatory="true" name="ERP_Marketingyventas"/>
+					<feature mandatory="true" name="ERP_Modulodegestiondeproyectos"/>
+				</or>
+				<feature mandatory="true" name="SCM_Sistemadegestiondeabastecimiento"/>
+			</alt>
+      		<alt mandatory="true" name="NuevovsExistente">
+				<feature mandatory="true" name="Adquirirsistemanuevo"/>
+				<feature mandatory="true" name="Adaptarsistemaexistente"/>
+			</alt>
+      		<alt mandatory="true" name="Tercerizacion">
+				<feature mandatory="true" name="Subcontratarpersonalizacion"/>
+				<feature mandatory="true" name="Subcontratarpartedeldesarrolloeintegracion"/>
+				<feature mandatory="true" name="Subcontratarlaadministraciondeunprocesodenegociocompleto"/>
+				<feature mandatory="true" name="Subcontratargerenciadelproyectodeimplementacion"/>
+			</alt>
+      		<alt mandatory="true" name="TipodeSolucion">
+				<feature mandatory="true" name="Comercial"/>
+				<feature mandatory="true" name="OpenSource"/>
+			</alt>
+      		<alt mandatory="true" name="ModelodeDespliegue">
+				<feature mandatory="true" name="OnPremise"/>
+				<feature mandatory="true" name="SoftwarecomoservicioSaaS"/>
+				<feature mandatory="true" name="InfraestructuracomoservicioIaaS"/>
+			</alt>
+      		<alt mandatory="true" name="ModelodeImplementacion">
+				<feature mandatory="true" name="BigBang"/>
+				<feature mandatory="true" name="Implementacionporfases"/>
+				<feature mandatory="true" name="Implementacionporprocesos"/>
+			</alt>
+      		<alt mandatory="true" name="Mantenimiento">
+				<feature mandatory="true" name="Contratoconelproveedor"/>
+				<feature mandatory="true" name="Contratoconunproveedorespecializado"/>
+				<feature mandatory="true" name="Mantenimientoporcuentapropia"/>
+				<feature mandatory="true" name="Sincontratodemantenimiento"/>
+			</alt>
+      		<alt mandatory="true" name="ModelodeSeleccion">
+				<feature mandatory="true" name="RFP_Requestforproposal"/>
+				<feature mandatory="true" name="Consultoriaexterna"/>
+				<feature mandatory="true" name="Evaluacioninterna"/>
+			</alt>
+      		<alt mandatory="true" name="Plataforma">
+				<feature mandatory="true" name="Sistemaempresarialbasadoenlamismaplataformatecnologica"/>
+				<feature mandatory="true" name="Sistemaempresarialbasadoenunaplataformadiferente"/>
+			</alt>
+      		<alt mandatory="true" name="Integracion">
+				<feature mandatory="true" name="Middleware"/>
+				<feature mandatory="true" name="Desarrollopropio"/>
+				<feature mandatory="true" name="Proveedor"/>
+			</alt>
+      		<alt mandatory="true" name="Financiacion">
+				<feature mandatory="true" name="RecursosPropios"/>
+				<feature mandatory="true" name="Credito"/>
+				<feature mandatory="true" name="Leasing"/>
+			</alt>
+    	</and>
+  	</struct>
+  	<constraints>
+    	<rule>
+			<disj>
+				<not>
+					<var>Gestiondecontactos</var>
+				</not>
+				<var>ERP_Modulodeclientes</var>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Ajustarprocesosdeflujodetrabajo</var>
+				</not>
+				<disj>
+					<not>
+						<var>Mejorarcapacidadderespuesta</var>
+					</not>
+					<var>ERP_Modulodegestiondeabastecimiento</var>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Gestionarpresupuestos</var>
+				</not>
+				<disj>
+					<not>
+						<var>Crearyconsolidarinformes</var>
+					</not>
+					<disj>
+						<not>
+							<var>Buscartendenciasyrelaciones</var>
+						</not>
+						<disj>
+							<not>
+								<var>Compartirconocimiento</var>
+							</not>
+							<var>ERP_Modulodeinteligenciadenegocio</var>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Segmentarydepurarclientes</var>
+				</not>
+				<disj>
+					<not>
+						<var>Planificacionypresupuestosdemercadeo</var>
+					</not>
+					<disj>
+						<not>
+							<var>Gestiondedatosylistas</var>
+						</not>
+						<disj>
+							<not>
+								<var>Analisisdemarketing</var>
+							</not>
+							<disj>
+								<not>
+									<var>GestiondeCampanias</var>
+								</not>
+								<disj>
+									<not>
+										<var>Facilitartareasdemercadeoypublicidad</var>
+									</not>
+									<disj>
+										<not>
+											<var>Gestionderespuestasyclientespotenciales</var>
+										</not>
+										<var>CRM_Modulomarketing</var>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Reducirciclosdeventas</var>
+				</not>
+				<disj>
+					<not>
+						<var>Aumentartasasdecierredeventas</var>
+					</not>
+					<disj>
+						<not>
+							<var>Mejorarretenciondeclientes</var>
+						</not>
+						<disj>
+							<not>
+								<var>Implementarnuevoprocesodeventas</var>
+							</not>
+							<var>CRM_ModuloVentas</var>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Gestionarinformaciondeclientes</var>
+				</not>
+				<disj>
+					<not>
+						<var>Gestiondecasosdeclientes</var>
+					</not>
+					<disj>
+						<not>
+							<var>Historialdeserviciosdeclientes</var>
+						</not>
+						<disj>
+							<not>
+								<var>Aumentarbasedeclientes</var>
+							</not>
+							<disj>
+								<not>
+									<var>Implementarnuevoprocesodeatencionalcliente</var>
+								</not>
+								<disj>
+									<not>
+										<var>Mejorarconocimientodelcliente</var>
+									</not>
+									<disj>
+										<not>
+											<var>Medirsatisfacciondelconsumidor</var>
+										</not>
+										<var>CRM_Modulodeclientes</var>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Controlsobrerecursoshumanos</var>
+				</not>
+				<disj>
+					<not>
+						<var>Nuevosprocesosderecursoshumanos</var>
+					</not>
+					<disj>
+						<not>
+							<var>Reclutamiento</var>
+						</not>
+						<disj>
+							<not>
+								<var>Biodata_hojasdevida</var>
+							</not>
+							<disj>
+								<not>
+									<var>Analisisdecargos_estructuraorganizacional</var>
+								</not>
+								<disj>
+									<not>
+										<var>Nominayadministraciondesalarios</var>
+									</not>
+									<disj>
+										<not>
+											<var>Educacionycapacitacion</var>
+										</not>
+										<disj>
+											<not>
+												<var>Saludocupacional</var>
+											</not>
+											<disj>
+												<not>
+													<var>Modelamientodeprocesosyorganigramas</var>
+												</not>
+												<var>ERP_Modulorecursoshumanos</var>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Nuevosprocesosfinancieros</var>
+				</not>
+				<disj>
+					<not>
+						<var>Implementarcontrolessobreprocesosfinancieros</var>
+					</not>
+					<disj>
+						<not>
+							<var>Gestioncontable</var>
+						</not>
+						<disj>
+							<not>
+								<var>Manejodecuentasporpagar_Proveedores</var>
+							</not>
+							<disj>
+								<not>
+									<var>Sistemasdecosteo</var>
+								</not>
+								<disj>
+									<not>
+										<var>Administraciondeactivosfijos</var>
+									</not>
+									<disj>
+										<not>
+											<var>Manejodeconciliacionesbancarias</var>
+										</not>
+										<disj>
+											<not>
+												<var>Controldeinversiones</var>
+											</not>
+											<disj>
+												<not>
+													<var>Manejodeobligacionesfinancieras</var>
+												</not>
+												<disj>
+													<not>
+														<var>Tesoreria</var>
+													</not>
+													<disj>
+														<not>
+															<var>Contabilidadanalitica</var>
+														</not>
+														<disj>
+															<not>
+																<var>Controlyadministraciondelpresupuesto</var>
+															</not>
+															<disj>
+																<not>
+																	<var>Manejodeactivosdecapital</var>
+																</not>
+																<var>ERP_Modulofinanciero</var>
+															</disj>
+														</disj>
+													</disj>
+												</disj>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<var>Manejodeinventarios</var>
+				<disj>
+					<not>
+						<var>Manejodealmacen</var>
+					</not>
+					<disj>
+						<not>
+							<var>Gestiondecompras</var>
+						</not>
+						<disj>
+							<not>
+								<var>Gestiondeactivosfijos</var>
+							</not>
+							<disj>
+								<not>
+									<var>Comercioexterior</var>
+								</not>
+								<disj>
+									<not>
+										<var>Seguros</var>
+									</not>
+									<var>ERP_Moduloadministrativo</var>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Manejodeordenesdeproduccion</var>
+				</not>
+				<disj>
+					<not>
+						<var>Manejodeordenesdecompra</var>
+					</not>
+					<disj>
+						<not>
+							<var>Planificaciondenecesidadesdecapacidad</var>
+						</not>
+						<disj>
+							<not>
+								<var>Planificaciondesuministros</var>
+							</not>
+							<disj>
+								<not>
+									<var>Disminuirtiemposdeentrega</var>
+								</not>
+								<disj>
+									<not>
+										<var>Integracionconproveedores</var>
+									</not>
+									<disj>
+										<not>
+											<var>Gestiondeproveedores</var>
+										</not>
+										<disj>
+											<not>
+												<var>Administraciondemateriasprimas</var>
+											</not>
+											<disj>
+												<not>
+													<var>Gestiondebodega</var>
+												</not>
+												<disj>
+													<not>
+														<var>Realizarcontroldecostos</var>
+													</not>
+													<disj>
+														<not>
+															<var>Administraciondepedidosydespachos</var>
+														</not>
+														<var>ERP_Modulodeproduccion</var>
+													</disj>
+												</disj>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Ajustarprocesosdeflujodetrabajo</var>
+				</not>
+				<disj>
+					<not>
+						<var>Mejorarcapacidadderespuesta</var>
+					</not>
+					<disj>
+						<not>
+							<var>Planearygestionarcapacidaddebodegajeyalmacenamiento</var>
+						</not>
+						<disj>
+							<not>
+								<var>Gestiondetransportedemercancia</var>
+							</not>
+							<disj>
+								<not>
+									<var>Logisticadetransporteinternacional</var>
+								</not>
+								<disj>
+									<not>
+										<var>Gestionderelacionconproveedores</var>
+									</not>
+									<disj>
+										<not>
+											<var>Gestiondelademanda</var>
+										</not>
+										<var>SCM_Sistemadegestiondeabastecimiento</var>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>GestiondeCampanias</var>
+				</not>
+				<disj>
+					<not>
+						<var>Gestionarinformaciondeclientes</var>
+					</not>
+					<disj>
+						<not>
+							<var>Historialdeserviciosdeclientes</var>
+						</not>
+						<disj>
+							<not>
+								<var>Organizarrecursosdeservicio</var>
+							</not>
+							<disj>
+								<not>
+									<var>Facturacionydevolucion</var>
+								</not>
+								<disj>
+									<not>
+										<var>Cartera</var>
+									</not>
+									<disj>
+										<not>
+											<var>Administraciondepreciosydescuentos</var>
+										</not>
+										<disj>
+											<not>
+												<var>Administraciondepromociones</var>
+											</not>
+											<disj>
+												<not>
+													<var>Administraciondecuotaseincentivos</var>
+												</not>
+												<disj>
+													<not>
+														<var>Administraciondevisitacomercial</var>
+													</not>
+													<disj>
+														<not>
+															<var>Importacionesyexportaciones</var>
+														</not>
+														<disj>
+															<not>
+																<var>Gestionarcontratosdeservicio</var>
+															</not>
+															<var>ERP_Marketingyventas</var>
+														</disj>
+													</disj>
+												</disj>
+											</disj>
+										</disj>
+									</disj>
+								</disj>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+    	<rule>
+			<disj>
+				<not>
+					<var>Presupuestarcostosytiempos</var>
+				</not>
+				<disj>
+					<not>
+						<var>Automatizarlafacturacion</var>
+					</not>
+					<disj>
+						<not>
+							<var>Predecirdisponibilidades</var>
+						</not>
+						<disj>
+							<not>
+								<var>Seguimientodecostosyconsumos</var>
+							</not>
+							<disj>
+								<not>
+									<var>Planificarcapacidades</var>
+								</not>
+								<var>ERP_Modulodegestiondeproyectos</var>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+  	</constraints>
+  	<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+  	<comments/>
+  	<featureOrder userDefined="false"/>
+	<configurations/>
+</featureModel>
