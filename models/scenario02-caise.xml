@@ -39,10 +39,6 @@
 					</or>
 					<feature mandatory="true" name="SCM_Sistemadegestiondeabastecimiento"/>
 				</alt>
-				<alt mandatory="true" name="NuevovsExistente">
-					<feature mandatory="true" name="Adquirirsistemanuevo"/>
-					<feature mandatory="true" name="Adaptarsistemaexistente"/>
-				</alt>
 				<alt mandatory="true" name="ModelodeImplementacion">
 					<feature mandatory="true" name="BigBang"/>
 					<feature mandatory="true" name="Implementacionporfases"/>
