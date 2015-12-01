@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="4">
+		<struct>
+			<and mandatory="true" name="InversionTI">
+				<or mandatory="true" name="MotivadoresdeNegocio">
+					<feature mandatory="true" name="Segmentarydepurarclientes"/>
+					<feature mandatory="true" name="Analisisdemarketing"/>
+					<feature mandatory="true" name="GestiondeCampanias"/>
+					<feature mandatory="true" name="Reducirciclosdeventas"/>
+					<feature mandatory="true" name="Mejorarretenciondeclientes"/>
+					<feature mandatory="true" name="Mejorarconocimientodelcliente"/>
+					<feature mandatory="true" name="Implementarcontrolessobreprocesosfinancieros"/>
+					<feature mandatory="true" name="Controlyadministraciondelpresupuesto"/>
+					<feature mandatory="true" name="Manejodeinventarios"/>
+					<feature mandatory="true" name="Manejodealmacen"/>
+					<feature mandatory="true" name="Gestiondecompras"/>
+					<feature mandatory="true" name="Comercioexterior"/>
+					<feature mandatory="true" name="Disminuirtiemposdeentrega"/>
+					<feature mandatory="true" name="Integracionconproveedores"/>
+					<feature mandatory="true" name="Buscartendenciasyrelaciones"/>
+					<feature mandatory="true" name="Compartirconocimiento"/>
+					<feature mandatory="true" name="Predecirdisponibilidades"/>
+					<feature mandatory="true" name="Planificarcapacidades"/>
+					<feature mandatory="true" name="Gestiondelademanda"/>
+				</or>
+				<alt mandatory="true" name="SistemasEmpresariales">
+					<or mandatory="true" name="CRM_CustomerRelationshipManagement">
+						<feature mandatory="true" name="CRM_Modulomarketing"/>
+						<feature mandatory="true" name="CRM_ModuloVentas"/>
+						<feature mandatory="true" name="CRM_Modulodeclientes"/>
+					</or>
+					<or mandatory="true" name="ERP_Enterpriseresourceplanning">
+						<feature mandatory="true" name="ERP_Modulofinanciero"/>
+						<feature mandatory="true" name="ERP_Moduloadministrativo"/>
+						<feature mandatory="true" name="ERP_Modulodeproduccion"/>
+						<feature mandatory="true" name="ERP_Modulodeinteligenciadenegocio"/>
+						<feature mandatory="true" name="ERP_Marketingyventas"/>
+						<feature mandatory="true" name="ERP_Modulodegestiondeproyectos"/>
+					</or>
+					<feature mandatory="true" name="SCM_Sistemadegestiondeabastecimiento"/>
+				</alt>
+				<alt mandatory="true" name="ModelodeImplementacion">
+					<feature extended="true" mandatory="true" name="BigBang">
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Mayor probabilidad de aparición de fallas o errores en el sistema e incremento de costos para corregir y mitigar las fallas en plena operación."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Pérdida de productividad si el nuevo sistema reemplaza a uno previamente existente, pues el tiempo de entrenamiento y la interacción directa de los usuarios con un sistema completamente nuevo requiere superar una curva de aprendizaje."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="13.0" minMagnitude="0.0" observations="Incremento en costos de soporte."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Pérdida de productividad si el funcionamiento del sistema no cumple con los requerimientos mínimos de operación."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Baja en la moral y eficacia de los empleados."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Implementacionporfases">
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="13.0" minMagnitude="0.0" observations="Incremento en costos de implementación (por fases intermedias mal definidas, o inclusive innecesarias)."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="13.0" minMagnitude="0.0" observations="Pérdida de la credibilidad en el departamento de TI si el proceso se estanca y no presenta resultados."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Detrimento de la operación."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Problemas de comunicación entre departamentos."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Fallas en la disponibilidad de la información y/o de funcionalidades de negocio."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Costos adicionales para el soporte y mantenimiento de los sistemas que operan en paralelo."/>
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Necesidad de requerimientos adicionales para mantener los sistemas sincronizados."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Mayor carga laboral para los empleados y su consecuente costo adicional."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Incremento en costos de almacenamiento."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Instalaciones y redes saturadas por la operación de sistemas en simultáneo."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Problemas con la administración de activos de software."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Implementacionporprocesos">
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Retrasos en la implementación y puesta a punto de componentes del sistema."/>
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Imposibilidad de usar funcionalidades ya implementadas pero con dependencias funcionales."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Costos adicionales para acelerar o establecer proyectos complementarios."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Incremento en el costo total de implementación, pues cada proyecto individual requiere de fases de entrenamiento y pruebas por separado."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Los requerimientos necesarios en orden de importancia o retorno a la inversión no se implementan, y se retrasa el proceso de mejoramiento y aprovechamiento de las ventajas resultado de la implementación del sistema."/>
+        			</feature>
+				</alt>
+				<alt mandatory="true" name="Financiacion">
+					<feature extended="true" mandatory="true" name="RecursosPropios">
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Necesidad de replantear los objetivos y especificaciones del proyecto de inversión."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Falta o disminución en la disponibilidad de recursos para las actividades core del negocio."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Disminución en la capacidad de reacción ante eventos financieros adversos."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Credito">
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Sobrecostos generados por las elevadas tasas de interés, y/o el tipo de crédito adquirido."/>
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Dificultad para efectuar los pagos periódicos."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="La posibilidad de incurrir en el pago de interéses de mora."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Pérdida de activos para cubrir las deudas adquiridas por venta y/o embargo."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="4.0" minMagnitude="0.0" observations="Impacto en la reputación e historial financiero de la organización."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Leasing">
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="La necesidad de escoger el sistema o solución a implementar, bajo una oferta muy reducida de alternativas y bajo las condiciones impuestas por los proveedores del contrato de leasing operativo, que no se adecuan a los requerimientos de la organización."/>
+        			</feature>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<disj>
+					<not>
+						<var>Buscartendenciasyrelaciones</var>
+					</not>
+					<disj>
+						<not>
+							<var>Compartirconocimiento</var>
+						</not>
+						<var>ERP_Modulodeinteligenciadenegocio</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Segmentarydepurarclientes</var>
+					</not>
+					<disj>
+						<not>
+							<var>Analisisdemarketing</var>
+						</not>
+						<disj>
+							<not>
+								<var>GestiondeCampanias</var>
+							</not>
+							<var>CRM_Modulomarketing</var>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Reducirciclosdeventas</var>
+					</not>
+					<disj>
+						<not>
+							<var>Mejorarretenciondeclientes</var>
+						</not>
+						<var>CRM_ModuloVentas</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Mejorarconocimientodelcliente</var>
+					</not>
+					<var>CRM_Modulodeclientes</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Implementarcontrolessobreprocesosfinancieros</var>
+					</not>
+					<disj>
+						<not>
+							<var>Controlyadministraciondelpresupuesto</var>
+						</not>
+						<var>ERP_Modulofinanciero</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>Manejodeinventarios</var>
+					<disj>
+						<not>
+							<var>Manejodealmacen</var>
+						</not>
+						<disj>
+							<not>
+								<var>Gestiondecompras</var>
+							</not>
+							<disj>
+								<not>
+									<var>Comercioexterior</var>
+								</not>
+								<var>ERP_Moduloadministrativo</var>
+							</disj>
+						</disj>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Disminuirtiemposdeentrega</var>
+					</not>
+					<disj>
+						<not>
+							<var>Integracionconproveedores</var>
+						</not>
+						<var>ERP_Modulodeproduccion</var>
+					</disj>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Gestiondelademanda</var>
+					</not>
+					<var>SCM_Sistemadegestiondeabastecimiento</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>GestiondeCampanias</var>
+					</not>
+					<var>ERP_Marketingyventas</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>Predecirdisponibilidades</var>
+					</not>
+					<disj>
+						<not>
+							<var>Planificarcapacidades</var>
+						</not>
+						<var>ERP_Modulodegestiondeproyectos</var>
+					</disj>
+				</disj>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

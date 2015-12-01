@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="4">
+		<struct>
+			<and mandatory="true" name="InversionTI">
+				<or mandatory="true" name="MotivadoresdeNegocio">
+					<feature mandatory="true" name="Segmentarydepurarclientes"/>
+					<feature mandatory="true" name="Analisisdemarketing"/>
+					<feature mandatory="true" name="GestiondeCampanias"/>
+					<feature mandatory="true" name="Reducirciclosdeventas"/>
+					<feature mandatory="true" name="Mejorarretenciondeclientes"/>
+					<feature mandatory="true" name="Mejorarconocimientodelcliente"/>
+					<feature mandatory="true" name="Implementarcontrolessobreprocesosfinancieros"/>
+					<feature mandatory="true" name="Controlyadministraciondelpresupuesto"/>
+					<feature mandatory="true" name="Manejodeinventarios"/>
+					<feature mandatory="true" name="Manejodealmacen"/>
+					<feature mandatory="true" name="Gestiondecompras"/>
+					<feature mandatory="true" name="Comercioexterior"/>
+					<feature mandatory="true" name="Disminuirtiemposdeentrega"/>
+					<feature mandatory="true" name="Integracionconproveedores"/>
+					<feature mandatory="true" name="Buscartendenciasyrelaciones"/>
+					<feature mandatory="true" name="Compartirconocimiento"/>
+					<feature mandatory="true" name="Predecirdisponibilidades"/>
+					<feature mandatory="true" name="Planificarcapacidades"/>
+					<feature mandatory="true" name="Gestiondelademanda"/>
+				</or>
+				<alt mandatory="true" name="SistemasEmpresariales">
+					<or mandatory="true" name="CRM_CustomerRelationshipManagement">
+						<feature mandatory="true" name="CRM_Modulomarketing"/>
+						<feature mandatory="true" name="CRM_ModuloVentas"/>
+						<feature mandatory="true" name="CRM_Modulodeclientes"/>
+					</or>
+					<or mandatory="true" name="ERP_Enterpriseresourceplanning">
+						<feature mandatory="true" name="ERP_Modulofinanciero"/>
+						<feature mandatory="true" name="ERP_Moduloadministrativo"/>
+						<feature mandatory="true" name="ERP_Modulodeproduccion"/>
+						<feature mandatory="true" name="ERP_Modulodeinteligenciadenegocio"/>
+						<feature mandatory="true" name="ERP_Marketingyventas"/>
+						<feature mandatory="true" name="ERP_Modulodegestiondeproyectos"/>
+					</or>
+					<feature mandatory="true" name="SCM_Sistemadegestiondeabastecimiento"/>
+				</alt>
+				<alt mandatory="true" name="NuevovsExistente">
+					<feature extended="true" mandatory="true" name="Adquirirsistemanuevo">
+          				<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Tecnico" maxMagnitude="2" minMagnitude="0" observations=""/>
+          				<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Consultor" maxMagnitude="1" minMagnitude="0" observations=""/>
+        				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Uso incorrecto del nuevo sistema."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="17.0" minMagnitude="0.0" observations="Mayor incidencia de errores involuntarios por falta de capacitación."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Mayor incidencia de errores en las aplicaciones."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Frustración de los clientes y usuarios que utilizan las aplicaciones."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Sobrecostos por soporte adicional de las aplicaciones debido al mal uso."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="27.0" minMagnitude="0.0" observations="Inversiones adicionales en interfaces y mecanismos de comunicación entre sistemas."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="27.0" minMagnitude="0.0" observations="Necesidad de migración y configuración adicional en algunos casos."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Adaptarsistemaexistente">
+          				<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Consultor" maxMagnitude="1" minMagnitude="0" observations=""/>
+          				<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Tecnico" maxMagnitude="1" minMagnitude="0" observations=""/>
+  		      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Pérdida de latencia en el sistema."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="13.0" minMagnitude="0.0" observations="Aumento en los recursos de infraestructura utilizados."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="27.0" minMagnitude="0.0" observations="Establecimiento de mecanismos adicionales para garantizar la interoperabilidad."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="27.0" minMagnitude="0.0" observations="Inversiones adicionales (importantes) para contratar expertos en sistemas programados bajo lenguajes de programación poco comunes."/>
+        			</feature>
+				</alt>
+				<alt mandatory="true" name="Tercerizacion">
+					<feature extended="true" mandatory="true" name="Subcontratarpersonalizacion">
+	          			<featureAttribute dimension="Costos" dimensionID="1" impactVariable="Implementacion" maxMagnitude="200000" minMagnitude="0" observations=""/>
+    	      			<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Implementacion" maxMagnitude="10" minMagnitude="0" observations="Requierepersonalqueformepartedelequipointerdisciplinarioquetrabajaraconelproveedorenellevantamientoderequerimientosfuncionales"/>
+        				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="19.0" minMagnitude="0.0" observations="Mala calidad en el proceso de personalización."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="19.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes o nuevos contratos de tercerización para ajustar o mejorar la calidad del proceso."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar el proceso de personalización, pues dentro de la organización no será posible soportarlo debido a la falta de capacidades y conocimiento."/>
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Subcontratarpartedeldesarrolloeintegracion">
+          				<featureAttribute dimension="Costos" dimensionID="1" impactVariable="Implementacion" maxMagnitude="300000" minMagnitude="0" observations=""/>
+	          			<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Implementacion" maxMagnitude="5" minMagnitude="0" observations=""/>
+    	    			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar los procesos de desarrollo e integración, pues dentro de la organización no será posible soportarlos debido a la falta de capacidades y conocimientos."/>
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="19.0" minMagnitude="0.0" observations="Mala calidad en los procesos de desarrollo e integración."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="19.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes o nuevos contratos de tercerización para ajustar o mejorar la calidad de los procesos."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Subcontratarlaadministraciondeunprocesodenegociocompleto">
+          				<featureAttribute dimension="Costos" dimensionID="1" impactVariable="Implementacion" maxMagnitude="200000" minMagnitude="0" observations=""/>
+          				<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Implementacion" maxMagnitude="7" minMagnitude="0" observations=""/>
+	        			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías y procedimientos."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar ese proceso de negocio, pues dentro de la organización no será posible soportarlo debido a la falta de capacidades y conocimiento."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="19.0" minMagnitude="0.0" observations="Mala calidad en el proceso de negocio dado en subcontratación."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="19.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes o nuevos contratos de tercerización para ajustar o mejorar la calidad del mismo."/>
+        			</feature>
+					<feature extended="true" mandatory="true" name="Subcontratargerenciadelproyectodeimplementacion">
+    	      			<featureAttribute dimension="Costos" dimensionID="1" impactVariable="Implementacion" maxMagnitude="150000" minMagnitude="0" observations=""/>
+        	  			<featureAttribute dimension="RecursosHumanos" dimensionID="3" impactVariable="Implementacion" maxMagnitude="5" minMagnitude="0" observations=""/>
+        				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Posibles multas por incumplimiento de contratos."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Imposibilidad para cambiar de proveedor."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="23.0" minMagnitude="0.0" observations="Dependencia a cierto tipo de tecnologías y procedimientos."/>
+	          			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al proveedor."/>
+    	      			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="3.0" minMagnitude="0.0" observations="Posible dependencia al hecho de tener que subcontratar la gerencia de proyectos, pues dentro de la organización no será posible soportarlo debido a la falta de capacidades y conocimiento."/>
+        	  			<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Mala gerencia del proyecto de implementación."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Aparición de retrasos e incumplimiento de metas y objetivos del proyecto."/>
+          				<featureAttribute dimension="Riesgos" dimensionID="4" impactVariable="" maxMagnitude="7.0" minMagnitude="0.0" observations="Necesidad de realizar ajustes y nuevos contratos de gerencia o interventoría para ajustar y/o mejorar la calidad del proyecto de implementación."/>
+        			</feature>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<conj>
+						<var>Buscartendenciasyrelaciones</var>
+						<var>Compartirconocimiento</var>
+					</conj>
+					<var>ERP_Modulodeinteligenciadenegocio</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<conj>
+						<var>Segmentarydepurarclientes</var>
+						<conj>
+							<var>Analisisdemarketing</var>
+							<var>GestiondeCampanias</var>
+						</conj>
+					</conj>
+					<var>CRM_Modulomarketing</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<conj>
+						<var>Reducirciclosdeventas</var>
+						<var>Mejorarretenciondeclientes</var>
+					</conj>
+					<var>CRM_ModuloVentas</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>Mejorarconocimientodelcliente</var>
+					<var>CRM_Modulodeclientes</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<conj>
+						<var>Implementarcontrolessobreprocesosfinancieros</var>
+						<var>Controlyadministraciondelpresupuesto</var>
+					</conj>
+					<var>ERP_Modulofinanciero</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<conj>
+						<var>Manejodeinventarios</var>
+						<conj>
+							<var>Manejodealmacen</var>
+							<conj>
+								<var>Gestiondecompras</var>
+								<var>Comercioexterior</var>
+							</conj>
+						</conj>
+					</conj>
+					<var>ERP_Moduloadministrativo</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<conj>
+						<var>Disminuirtiemposdeentrega</var>
+						<var>Integracionconproveedores</var>
+					</conj>
+					<var>ERP_Modulodeproduccion</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>Gestiondelademanda</var>
+					<var>SCM_Sistemadegestiondeabastecimiento</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>GestiondeCampanias</var>
+					<var>ERP_Marketingyventas</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<conj>
+						<var>Predecirdisponibilidades</var>
+						<var>Planificarcapacidades</var>
+					</conj>
+					<var>ERP_Modulodegestiondeproyectos</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
