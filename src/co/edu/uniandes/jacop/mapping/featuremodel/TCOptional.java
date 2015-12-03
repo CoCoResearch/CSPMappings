@@ -15,24 +15,25 @@ public class TCOptional {
 
 		BooleanVar A = new BooleanVar(store, "A");
 		BooleanVar A1 = new BooleanVar(store, "A1");
-		
+
 		BooleanVar[] Vars = new BooleanVar[2];
 		Vars[0] = A;
 		Vars[1] = A1;
-		
+
 		Search<IntVar> search = new DepthFirstSearch<IntVar>();
-		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store, Vars, new IndomainMiddle<IntVar>());
+		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store,
+				Vars, new IndomainMiddle<IntVar>());
 		search.getSolutionListener().searchAll(true);
 		search.getSolutionListener().recordSolutions(true);
 		boolean result = search.labeling(store, select);
-		
-		for(int i = 1; i <= search.getSolutionListener().solutionsNo(); i++) {
+
+		for (int i = 1; i <= search.getSolutionListener().solutionsNo(); i++) {
 			System.out.print("Solution " + i + ":");
-			
-			for(int j = 0; j < search.getSolution(i).length; j++) {
+
+			for (int j = 0; j < search.getSolution(i).length; j++) {
 				System.out.print(search.getSolution(i)[j]);
 			}
-			
+
 			System.out.println();
 		}
 	}

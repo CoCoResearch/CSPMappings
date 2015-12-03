@@ -10,14 +10,14 @@ import org.chocosolver.solver.variables.VariableFactory;
 public class MappingCTCExcludes {
 
 	public void solveProblem() {
-		Solver solver = new Solver( );
-	
+		Solver solver = new Solver();
+
 		BoolVar A = VariableFactory.bool("A", solver);
 		BoolVar B = VariableFactory.bool("B", solver);
 		BoolVar C = VariableFactory.bool("C", solver);
-		
+
 		SatFactory.addClauses(LogOp.implies(A, LogOp.nor(C)), solver);
-		
+
 		Chatterbox.showSolutions(solver);
 		System.out.println(solver.findAllSolutions());
 		Chatterbox.printStatistics(solver);

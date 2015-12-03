@@ -1,31 +1,29 @@
-package co.edu.uniandes.jacop.mapping.featuremodel;
+package co.edu.uniandes.jacop.mapping.decisionrules;
 
-import org.jacop.core.BooleanVar;
 import org.jacop.core.IntVar;
 import org.jacop.core.Store;
-import org.jacop.satwrapper.SatTranslation;
+import org.jacop.jasat.utils.structures.IntSet;
 import org.jacop.search.DepthFirstSearch;
 import org.jacop.search.IndomainMiddle;
 import org.jacop.search.InputOrderSelect;
 import org.jacop.search.Search;
 import org.jacop.search.SelectChoicePoint;
 
-public class TCMandatory {
-
+public class DRFiniteRelation {
 	public void solveProblem() {
 		Store store = new Store();
-		SatTranslation sat = new SatTranslation(store);
 
-		BooleanVar A = new BooleanVar(store, "A");
-		BooleanVar A1 = new BooleanVar(store, "A1");
-		// A.addDom(1, 1);
+		IntSet Set = new IntSet();
+		Set.add(3);
+		Set.add(6);
+		Set.add(7);
 
-		BooleanVar[] Vars = new BooleanVar[2];
+		IntVar A = new IntVar(store, "A");
+		A.addDom(3, 3);
+		A.addDom(6, 7);
+
+		IntVar[] Vars = new IntVar[1];
 		Vars[0] = A;
-		Vars[1] = A1;
-
-		sat.impose();
-		sat.generate_implication(A, A1);
 
 		Search<IntVar> search = new DepthFirstSearch<IntVar>();
 		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store,

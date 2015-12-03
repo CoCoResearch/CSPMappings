@@ -8,12 +8,12 @@ import org.chocosolver.solver.variables.VariableFactory;
 public class MappingTCOptional {
 
 	public void solveProblem() {
-		Solver solver = new Solver( );
-	
+		Solver solver = new Solver();
+
 		// Optional for child feature of root node
 		BoolVar A = VariableFactory.bool("A", solver);
 		BoolVar A1 = VariableFactory.bool("A1", solver);
-		
+
 		Chatterbox.showSolutions(solver);
 		System.out.println(solver.findAllSolutions());
 		Chatterbox.printStatistics(solver);

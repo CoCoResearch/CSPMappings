@@ -11,17 +11,17 @@ import org.chocosolver.solver.variables.VariableFactory;
 public class Scenario1 {
 
 	private Solver solver;
-	
+
 	public Scenario1() {
-		this.solver = new Solver( );
+		this.solver = new Solver();
 	}
-	
+
 	public void solveProblem() {
-		
-		//----------------------------------------
+
+		// ----------------------------------------
 		// VARIABLES
-		//----------------------------------------
-		
+		// ----------------------------------------
+
 		// Decision selection
 		BoolVar Root = (BoolVar) VariableFactory.fixed(1, solver);
 		BoolVar A = (BoolVar) VariableFactory.fixed(1, solver);
@@ -39,7 +39,7 @@ public class Scenario1 {
 		BoolVar e1 = VariableFactory.bool("e1", solver);
 		BoolVar e2 = VariableFactory.bool("e2", solver);
 		BoolVar e3 = VariableFactory.bool("e3", solver);
-		
+
 		// Decision cost
 		IntVar A1Cost = VariableFactory.bounded("A1Cost", 0, 500, solver);
 		IntVar A2Cost = VariableFactory.bounded("A2Cost", 0, 200, solver);
@@ -50,7 +50,7 @@ public class Scenario1 {
 		IntVar e1Cost = VariableFactory.bounded("e1Cost", 0, 350, solver);
 		IntVar e2Cost = VariableFactory.bounded("e2Cost", 0, 350, solver);
 		IntVar e3Cost = VariableFactory.bounded("e3Cost", 0, 500, solver);
-		
+
 		// Decision time
 		IntVar A1Time = VariableFactory.bounded("A1Time", 0, 20, solver);
 		IntVar A2Time = VariableFactory.bounded("A2Time", 0, 30, solver);
@@ -61,48 +61,46 @@ public class Scenario1 {
 		IntVar e1Time = VariableFactory.bounded("e1Time", 0, 15, solver);
 		IntVar e2Time = VariableFactory.bounded("e2Time", 0, 20, solver);
 		IntVar e3Time = VariableFactory.bounded("e3Time", 0, 25, solver);
-		
-		
-		//----------------------------------------
+
+		// ----------------------------------------
 		// TREE CONSTRAINTS
-		//----------------------------------------
-		
+		// ----------------------------------------
+
 		// Mandatory
 		SatFactory.addClauses(LogOp.implies(E, E1), solver);
-		
+
 		// Or
 		SatFactory.addClauses(LogOp.or(A1, A2), solver);
-		/*BoolVar[] varsOr1 = new BoolVar[3];
-		varsOr1[0] = e1;
-		varsOr1[1] = e2;
-		varsOr1[2] = e3;
-		SatFactory.addClauses(LogOp.or(varsOr1), solver);*/
-		
+		/*
+		 * BoolVar[] varsOr1 = new BoolVar[3]; varsOr1[0] = e1; varsOr1[1] = e2;
+		 * varsOr1[2] = e3; SatFactory.addClauses(LogOp.or(varsOr1), solver);
+		 */
+
 		// Alternative
 		BoolVar[] varsXor1 = new BoolVar[3];
 		varsXor1[0] = C1;
 		varsXor1[1] = C2;
 		varsXor1[2] = C3;
 		SatFactory.addClauses(LogOp.or(varsXor1), solver);
-		SatFactory.addClauses(LogOp.ifOnlyIf(C1,LogOp.nor(C2)), solver);
-		SatFactory.addClauses(LogOp.ifOnlyIf(C1,LogOp.nor(C3)), solver);
-		SatFactory.addClauses(LogOp.ifOnlyIf(C2,LogOp.nor(C3)), solver);
-		
+		SatFactory.addClauses(LogOp.ifOnlyIf(C1, LogOp.nor(C2)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(C1, LogOp.nor(C3)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(C2, LogOp.nor(C3)), solver);
+
 		BoolVar[] varsXor2 = new BoolVar[3];
 		varsXor2[0] = e1;
 		varsXor2[1] = e2;
 		varsXor2[2] = e3;
 		SatFactory.addClauses(LogOp.or(varsXor2), solver);
-		SatFactory.addClauses(LogOp.ifOnlyIf(e1,LogOp.nor(e2)), solver);
-		SatFactory.addClauses(LogOp.ifOnlyIf(e1,LogOp.nor(e3)), solver);
-		SatFactory.addClauses(LogOp.ifOnlyIf(e2,LogOp.nor(e3)), solver);
-		
-		//----------------------------------------
+		SatFactory.addClauses(LogOp.ifOnlyIf(e1, LogOp.nor(e2)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(e1, LogOp.nor(e3)), solver);
+		SatFactory.addClauses(LogOp.ifOnlyIf(e2, LogOp.nor(e3)), solver);
+
+		// ----------------------------------------
 		// CROSS-TREE CONSTRAINTS
-		//----------------------------------------
-		
+		// ----------------------------------------
+
 		Chatterbox.showSolutions(solver);
-		//SMF.limitTime(solver, 5000);
+		// SMF.limitTime(solver, 5000);
 		System.out.println(solver.findAllSolutions());
 		Chatterbox.printStatistics(solver);
 	}

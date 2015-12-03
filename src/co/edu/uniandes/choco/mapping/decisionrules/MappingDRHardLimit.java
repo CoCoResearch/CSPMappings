@@ -10,7 +10,7 @@ import org.chocosolver.solver.variables.VariableFactory;
 public class MappingDRHardLimit {
 
 	public void solveProblem() {
-		Solver solver = new Solver( );
+		Solver solver = new Solver();
 
 		// Decision selection
 		BoolVar Root = (BoolVar) VariableFactory.fixed(1, solver);
@@ -51,14 +51,15 @@ public class MappingDRHardLimit {
 		Vars[6] = e1Cost;
 		Vars[7] = e2Cost;
 		Vars[8] = e3Cost;
-		
+
 		int maxValue = 3650;
-		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0, maxValue, solver);
-		
+		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0, maxValue,
+				solver);
+
 		solver.post(IntConstraintFactory.sum(Vars, TotalCost));
 		solver.post(IntConstraintFactory.arithm(TotalCost, ">", 100));
 		solver.post(IntConstraintFactory.arithm(TotalCost, "<=", 110));
-		
+
 		Chatterbox.showSolutions(solver);
 		System.out.println(solver.findAllSolutions());
 		Chatterbox.printStatistics(solver);

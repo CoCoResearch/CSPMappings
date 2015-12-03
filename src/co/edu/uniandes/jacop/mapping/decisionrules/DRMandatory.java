@@ -1,31 +1,31 @@
-package co.edu.uniandes.jacop.mapping.featuremodel;
+package co.edu.uniandes.jacop.mapping.decisionrules;
 
+import org.jacop.constraints.IfThen;
+import org.jacop.constraints.XeqC;
 import org.jacop.core.BooleanVar;
 import org.jacop.core.IntVar;
 import org.jacop.core.Store;
-import org.jacop.satwrapper.SatTranslation;
 import org.jacop.search.DepthFirstSearch;
 import org.jacop.search.IndomainMiddle;
 import org.jacop.search.InputOrderSelect;
 import org.jacop.search.Search;
 import org.jacop.search.SelectChoicePoint;
 
-public class TCMandatory {
-
+public class DRMandatory {
 	public void solveProblem() {
 		Store store = new Store();
-		SatTranslation sat = new SatTranslation(store);
 
 		BooleanVar A = new BooleanVar(store, "A");
-		BooleanVar A1 = new BooleanVar(store, "A1");
-		// A.addDom(1, 1);
+		BooleanVar B = new BooleanVar(store, "B");
+		BooleanVar B1 = new BooleanVar(store, "B1");
 
-		BooleanVar[] Vars = new BooleanVar[2];
+		BooleanVar[] Vars = new BooleanVar[3];
 		Vars[0] = A;
-		Vars[1] = A1;
+		Vars[1] = B;
+		Vars[2] = B1;
 
-		sat.impose();
-		sat.generate_implication(A, A1);
+		store.impose(new XeqC(B1, 1));
+		store.impose(new IfThen(new XeqC(B1, 1), new XeqC(B, 1)));
 
 		Search<IntVar> search = new DepthFirstSearch<IntVar>();
 		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store,

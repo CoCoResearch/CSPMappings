@@ -14,11 +14,11 @@ import org.jacop.search.SelectChoicePoint;
 public class PCParentDeselection {
 	public void solveProblem() {
 		Store store = new Store();
-		
+
 		BooleanVar A = new BooleanVar(store, "A");
 		BooleanVar A1 = new BooleanVar(store, "A1");
 		BooleanVar A2 = new BooleanVar(store, "A2");
-		
+
 		BooleanVar[] Vars = new BooleanVar[3];
 		Vars[0] = A;
 		Vars[1] = A1;
@@ -26,20 +26,21 @@ public class PCParentDeselection {
 
 		store.impose(new IfThen(new XeqC(A, 0), new XeqC(A1, 0)));
 		store.impose(new IfThen(new XeqC(A, 0), new XeqC(A2, 0)));
-		
+
 		Search<IntVar> search = new DepthFirstSearch<IntVar>();
-		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store, Vars, new IndomainMiddle<IntVar>());
+		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store,
+				Vars, new IndomainMiddle<IntVar>());
 		search.getSolutionListener().searchAll(true);
 		search.getSolutionListener().recordSolutions(true);
 		boolean result = search.labeling(store, select);
-		
-		for(int i = 1; i <= search.getSolutionListener().solutionsNo(); i++) {
+
+		for (int i = 1; i <= search.getSolutionListener().solutionsNo(); i++) {
 			System.out.print("Solution " + i + ":");
-			
-			for(int j = 0; j < search.getSolution(i).length; j++) {
+
+			for (int j = 0; j < search.getSolution(i).length; j++) {
 				System.out.print(search.getSolution(i)[j]);
 			}
-			
+
 			System.out.println();
 		}
 	}

@@ -11,7 +11,7 @@ import org.chocosolver.solver.variables.VariableFactory;
 public class MappingDRMultiObjective {
 
 	public void solveProblem() {
-		Solver solver = new Solver( );
+		Solver solver = new Solver();
 
 		// Decision selection
 		BoolVar Root = (BoolVar) VariableFactory.fixed(1, solver);
@@ -63,7 +63,7 @@ public class MappingDRMultiObjective {
 		Vars1[6] = e1Cost;
 		Vars1[7] = e2Cost;
 		Vars1[8] = e3Cost;
-		
+
 		IntVar[] Vars2 = new IntVar[9];
 		Vars2[0] = A1Time;
 		Vars2[1] = A2Time;
@@ -74,16 +74,18 @@ public class MappingDRMultiObjective {
 		Vars2[6] = e1Time;
 		Vars2[7] = e2Time;
 		Vars2[8] = e3Time;
-		
+
 		int costsMaxValue = 3650;
-		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0, costsMaxValue, solver);
-		
+		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0,
+				costsMaxValue, solver);
+
 		int timeMaxValue = 195;
-		IntVar TotalTime = VariableFactory.bounded("TotalTime", 0, timeMaxValue, solver);
-		
+		IntVar TotalTime = VariableFactory.bounded("TotalTime", 0,
+				timeMaxValue, solver);
+
 		solver.post(IntConstraintFactory.sum(Vars1, TotalCost));
 		solver.post(IntConstraintFactory.sum(Vars2, TotalTime));
-		
+
 		Chatterbox.showSolutions(solver);
 		solver.findParetoFront(ResolutionPolicy.MAXIMIZE, TotalCost, TotalTime);
 		Chatterbox.printStatistics(solver);

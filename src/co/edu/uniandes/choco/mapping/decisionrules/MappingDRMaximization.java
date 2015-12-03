@@ -11,7 +11,7 @@ import org.chocosolver.solver.variables.VariableFactory;
 public class MappingDRMaximization {
 
 	public void solveProblem() {
-		Solver solver = new Solver( );
+		Solver solver = new Solver();
 
 		// Decision selection
 		BoolVar Root = (BoolVar) VariableFactory.fixed(1, solver);
@@ -52,12 +52,13 @@ public class MappingDRMaximization {
 		Vars[6] = e1Cost;
 		Vars[7] = e2Cost;
 		Vars[8] = e3Cost;
-		
+
 		int maxValue = 3650;
-		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0, maxValue, solver);
-		
+		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0, maxValue,
+				solver);
+
 		solver.post(IntConstraintFactory.sum(Vars, TotalCost));
-		
+
 		Chatterbox.showSolutions(solver);
 		solver.findOptimalSolution(ResolutionPolicy.MAXIMIZE, TotalCost);
 		Chatterbox.printStatistics(solver);
