@@ -1,5 +1,7 @@
 package co.edu.uniandes.jacop.mapping.featuremodel;
 
+import org.jacop.constraints.IfThen;
+import org.jacop.constraints.XeqC;
 import org.jacop.core.BooleanVar;
 import org.jacop.core.IntVar;
 import org.jacop.core.Store;
@@ -9,16 +11,20 @@ import org.jacop.search.InputOrderSelect;
 import org.jacop.search.Search;
 import org.jacop.search.SelectChoicePoint;
 
-public class TCOptional {
+public class CTCRequires {
 	public void solveProblem() {
 		Store store = new Store();
-
-		BooleanVar A = new BooleanVar(store, "A");
-		BooleanVar A1 = new BooleanVar(store, "A1");
 		
-		BooleanVar[] Vars = new BooleanVar[2];
+		BooleanVar A = new BooleanVar(store, "A");
+		BooleanVar B = new BooleanVar(store, "B");
+		BooleanVar C = new BooleanVar(store, "C");
+		
+		BooleanVar[] Vars = new BooleanVar[3];
 		Vars[0] = A;
-		Vars[1] = A1;
+		Vars[1] = B;
+		Vars[2] = C;
+
+		store.impose(new IfThen(new XeqC(A, 1), new XeqC(C, 1)));
 		
 		Search<IntVar> search = new DepthFirstSearch<IntVar>();
 		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store, Vars, new IndomainMiddle<IntVar>());

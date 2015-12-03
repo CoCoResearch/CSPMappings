@@ -6,7 +6,6 @@ import org.jacop.core.Store;
 import org.jacop.satwrapper.SatTranslation;
 import org.jacop.search.DepthFirstSearch;
 import org.jacop.search.IndomainMiddle;
-import org.jacop.search.IndomainMin;
 import org.jacop.search.InputOrderSelect;
 import org.jacop.search.Search;
 import org.jacop.search.SelectChoicePoint;

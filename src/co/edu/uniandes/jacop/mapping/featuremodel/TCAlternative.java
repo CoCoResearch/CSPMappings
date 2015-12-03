@@ -1,8 +1,6 @@
 package co.edu.uniandes.jacop.mapping.featuremodel;
 
 import org.jacop.constraints.XeqC;
-import org.jacop.constraints.XgteqC;
-import org.jacop.constraints.XorBool;
 import org.jacop.core.BooleanVar;
 import org.jacop.core.IntVar;
 import org.jacop.core.Store;

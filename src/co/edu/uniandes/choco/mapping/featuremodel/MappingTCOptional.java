@@ -1,8 +1,6 @@
 package co.edu.uniandes.choco.mapping.featuremodel;
 
 import org.chocosolver.solver.Solver;
-import org.chocosolver.solver.constraints.SatFactory;
-import org.chocosolver.solver.constraints.nary.cnf.LogOp;
 import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.VariableFactory;

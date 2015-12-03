@@ -1,10 +1,6 @@
 package co.edu.uniandes;
 
-import co.edu.uniandes.choco.mapping.featuremodel.MappingTCOr;
-import co.edu.uniandes.jacop.mapping.featuremodel.TCAlternative;
-import co.edu.uniandes.jacop.mapping.featuremodel.TCMandatory;
-import co.edu.uniandes.jacop.mapping.featuremodel.TCOptional;
-import co.edu.uniandes.jacop.mapping.featuremodel.TCOr;
+import co.edu.uniandes.jacop.mapping.featuremodel.CTCExcludes;
 
 public class Main {
 
@@ -13,7 +9,7 @@ public class Main {
 		/*Model1 model1 = new Model1();
 		model1.solveProblem();*/
 		
-		TCAlternative model1 = new TCAlternative();
+		CTCExcludes model1 = new CTCExcludes();
 		model1.solveProblem();
 	}
 }
