@@ -220,4 +220,10 @@
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>
+		<attributes>
+    		<attribute dimension="Costos" frequency="Mensual" id="1" unitMeasure="Dolares"/>
+    		<attribute dimension="Tiempo" frequency="Anual" id="2" unitMeasure="Meses"/>
+    		<attribute dimension="RecursosHumanos" frequency="Mensual" id="3" unitMeasure="Personas"/>
+  			<attribute dimension="Riesgos" frequency="None" id="4" unitMeasure="None"/>
+  		</attributes>
 	</featureModel>

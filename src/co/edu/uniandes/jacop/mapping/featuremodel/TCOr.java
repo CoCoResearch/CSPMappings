@@ -1,32 +1,30 @@
 package co.edu.uniandes.jacop.mapping.featuremodel;
 
+import org.jacop.constraints.OrBool;
+import org.jacop.constraints.XgteqC;
 import org.jacop.core.BooleanVar;
 import org.jacop.core.IntVar;
 import org.jacop.core.Store;
-import org.jacop.satwrapper.SatTranslation;
 import org.jacop.search.DepthFirstSearch;
 import org.jacop.search.IndomainMiddle;
-import org.jacop.search.IndomainMin;
 import org.jacop.search.InputOrderSelect;
 import org.jacop.search.Search;
 import org.jacop.search.SelectChoicePoint;
 
-public class TCMandatory {
-
+public class TCOr {
 	public void solveProblem() {
 		Store store = new Store();
-		SatTranslation sat = new SatTranslation(store);
-
-		BooleanVar A = new BooleanVar(store, "A");
+		
+		IntVar Sum = new IntVar(store, "Sum", 0, 2);
 		BooleanVar A1 = new BooleanVar(store, "A1");
-		//A.addDom(1, 1);
+		BooleanVar A2 = new BooleanVar(store, "A2");
 		
 		BooleanVar[] Vars = new BooleanVar[2];
-		Vars[0] = A;
-		Vars[1] = A1;
-		
-		sat.impose();
-		sat.generate_implication(A, A1);
+		Vars[0] = A1;
+		Vars[1] = A2;
+
+		store.impose(new org.jacop.constraints.Sum(Vars, Sum));
+		store.impose(new XgteqC(Sum, 1));
 		
 		Search<IntVar> search = new DepthFirstSearch<IntVar>();
 		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store, Vars, new IndomainMiddle<IntVar>());
