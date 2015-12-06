@@ -1,5 +1,6 @@
 package co.edu.uniandes.jacop.mapping.featuremodel;
 
+import org.jacop.constraints.And;
 import org.jacop.constraints.IfThen;
 import org.jacop.constraints.XeqC;
 import org.jacop.core.BooleanVar;
@@ -25,7 +26,8 @@ public class CTCRequires {
 		Vars[2] = C;
 
 		store.impose(new IfThen(new XeqC(A, 1), new XeqC(C, 1)));
-
+		store.impose(new IfThen(new And(new XeqC(A, 1), new XeqC(B, 1)), new XeqC(C, 1)));
+		
 		Search<IntVar> search = new DepthFirstSearch<IntVar>();
 		SelectChoicePoint<IntVar> select = new InputOrderSelect<IntVar>(store,
 				Vars, new IndomainMiddle<IntVar>());

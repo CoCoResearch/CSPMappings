@@ -17,6 +17,7 @@ public class MappingCTCRequires {
 		BoolVar C = VariableFactory.bool("C", solver);
 
 		SatFactory.addClauses(LogOp.implies(A, C), solver);
+		SatFactory.addClauses(LogOp.implies(LogOp.and(A), C), solver);
 
 		Chatterbox.showSolutions(solver);
 		System.out.println(solver.findAllSolutions());

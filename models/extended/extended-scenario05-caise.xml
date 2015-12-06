@@ -106,132 +106,94 @@
 		</struct>
 		<constraints>
 			<rule>
-				<disj>
-					<not>
+				<imp>
+					<conj>
 						<var>Buscartendenciasyrelaciones</var>
-					</not>
-					<disj>
-						<not>
-							<var>Compartirconocimiento</var>
-						</not>
-						<var>ERP_Modulodeinteligenciadenegocio</var>
-					</disj>
-				</disj>
+						<var>Compartirconocimiento</var>
+					</conj>
+					<var>ERP_Modulodeinteligenciadenegocio</var>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
+				<imp>
+					<conj>
 						<var>Segmentarydepurarclientes</var>
-					</not>
-					<disj>
-						<not>
+						<conj>
 							<var>Analisisdemarketing</var>
-						</not>
-						<disj>
-							<not>
-								<var>GestiondeCampanias</var>
-							</not>
-							<var>CRM_Modulomarketing</var>
-						</disj>
-					</disj>
-				</disj>
+							<var>GestiondeCampanias</var>
+						</conj>
+					</conj>
+					<var>CRM_Modulomarketing</var>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
+				<imp>
+					<conj>
 						<var>Reducirciclosdeventas</var>
-					</not>
-					<disj>
-						<not>
-							<var>Mejorarretenciondeclientes</var>
-						</not>
-						<var>CRM_ModuloVentas</var>
-					</disj>
-				</disj>
+						<var>Mejorarretenciondeclientes</var>
+					</conj>
+					<var>CRM_ModuloVentas</var>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
-						<var>Mejorarconocimientodelcliente</var>
-					</not>
+				<imp>
+					<var>Mejorarconocimientodelcliente</var>
 					<var>CRM_Modulodeclientes</var>
-				</disj>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
+				<imp>
+					<conj>
 						<var>Implementarcontrolessobreprocesosfinancieros</var>
-					</not>
-					<disj>
-						<not>
-							<var>Controlyadministraciondelpresupuesto</var>
-						</not>
-						<var>ERP_Modulofinanciero</var>
-					</disj>
-				</disj>
+						<var>Controlyadministraciondelpresupuesto</var>
+					</conj>
+					<var>ERP_Modulofinanciero</var>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<var>Manejodeinventarios</var>
-					<disj>
-						<not>
+				<imp>
+					<conj>
+						<var>Manejodeinventarios</var>
+						<conj>
 							<var>Manejodealmacen</var>
-						</not>
-						<disj>
-							<not>
+							<conj>
 								<var>Gestiondecompras</var>
-							</not>
-							<disj>
-								<not>
-									<var>Comercioexterior</var>
-								</not>
-								<var>ERP_Moduloadministrativo</var>
-							</disj>
-						</disj>
-					</disj>
-				</disj>
+								<var>Comercioexterior</var>
+							</conj>
+						</conj>
+					</conj>
+					<var>ERP_Moduloadministrativo</var>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
+				<imp>
+					<conj>
 						<var>Disminuirtiemposdeentrega</var>
-					</not>
-					<disj>
-						<not>
-							<var>Integracionconproveedores</var>
-						</not>
-						<var>ERP_Modulodeproduccion</var>
-					</disj>
-				</disj>
+						<var>Integracionconproveedores</var>
+					</conj>
+					<var>ERP_Modulodeproduccion</var>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
-						<var>Gestiondelademanda</var>
-					</not>
+				<imp>
+					<var>Gestiondelademanda</var>
 					<var>SCM_Sistemadegestiondeabastecimiento</var>
-				</disj>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
-						<var>GestiondeCampanias</var>
-					</not>
+				<imp>
+					<var>GestiondeCampanias</var>
 					<var>ERP_Marketingyventas</var>
-				</disj>
+				</imp>
 			</rule>
 			<rule>
-				<disj>
-					<not>
+				<imp>
+					<conj>
 						<var>Predecirdisponibilidades</var>
-					</not>
-					<disj>
-						<not>
-							<var>Planificarcapacidades</var>
-						</not>
-						<var>ERP_Modulodegestiondeproyectos</var>
-					</disj>
-				</disj>
+						<var>Planificarcapacidades</var>
+					</conj>
+					<var>ERP_Modulodegestiondeproyectos</var>
+				</imp>
 			</rule>
 		</constraints>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>

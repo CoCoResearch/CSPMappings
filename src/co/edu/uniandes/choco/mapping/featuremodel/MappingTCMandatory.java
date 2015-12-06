@@ -14,7 +14,6 @@ public class MappingTCMandatory {
 
 		// Mandatory for child feature of root node
 		BoolVar A = (BoolVar) VariableFactory.fixed(1, solver);
-
 		BoolVar A1 = VariableFactory.bool("A1", solver);
 
 		SatFactory.addClauses(LogOp.implies(A, A1), solver);
