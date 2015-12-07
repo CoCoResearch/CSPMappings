@@ -7,7 +7,7 @@ import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingPCParentDeselection {
+public class PCParentDeselection {
 
 	public void solveProblem() {
 		Solver solver = new Solver();

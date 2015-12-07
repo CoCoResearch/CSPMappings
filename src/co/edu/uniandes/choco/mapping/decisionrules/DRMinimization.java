@@ -8,7 +8,7 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingDRMinimization {
+public class DRMinimization {
 
 	public void solveProblem() {
 		Solver solver = new Solver();

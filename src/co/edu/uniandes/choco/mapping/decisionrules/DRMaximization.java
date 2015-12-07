@@ -1,5 +1,6 @@
 package co.edu.uniandes.choco.mapping.decisionrules;
 
+import org.chocosolver.solver.ResolutionPolicy;
 import org.chocosolver.solver.Solver;
 import org.chocosolver.solver.constraints.IntConstraintFactory;
 import org.chocosolver.solver.trace.Chatterbox;
@@ -7,7 +8,7 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingDRHardLimit {
+public class DRMaximization {
 
 	public void solveProblem() {
 		Solver solver = new Solver();
@@ -57,11 +58,9 @@ public class MappingDRHardLimit {
 				solver);
 
 		solver.post(IntConstraintFactory.sum(Vars, TotalCost));
-		solver.post(IntConstraintFactory.arithm(TotalCost, ">", 100));
-		solver.post(IntConstraintFactory.arithm(TotalCost, "<=", 110));
 
 		Chatterbox.showSolutions(solver);
-		System.out.println(solver.findAllSolutions());
+		solver.findOptimalSolution(ResolutionPolicy.MAXIMIZE, TotalCost);
 		Chatterbox.printStatistics(solver);
 	}
 }

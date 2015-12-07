@@ -7,20 +7,20 @@ import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingCTCRequires {
+public class TCMandatory {
 
 	public void solveProblem() {
 		Solver solver = new Solver();
 
-		BoolVar A = VariableFactory.bool("A", solver);
-		BoolVar B = VariableFactory.bool("B", solver);
-		BoolVar C = VariableFactory.bool("C", solver);
+		// Mandatory for child feature of root node
+		BoolVar A = (BoolVar) VariableFactory.fixed(1, solver);
+		BoolVar A1 = VariableFactory.bool("A1", solver);
 
-		SatFactory.addClauses(LogOp.implies(A, C), solver);
-		SatFactory.addClauses(LogOp.implies(LogOp.and(A), C), solver);
+		SatFactory.addClauses(LogOp.implies(A, A1), solver);
 
 		Chatterbox.showSolutions(solver);
 		System.out.println(solver.findAllSolutions());
 		Chatterbox.printStatistics(solver);
 	}
+
 }

@@ -2,9 +2,7 @@ package co.edu.uniandes.jacop.scenarios;
 
 import org.jacop.constraints.And;
 import org.jacop.constraints.IfThen;
-import org.jacop.constraints.Sum;
 import org.jacop.constraints.XeqC;
-import org.jacop.constraints.XgtC;
 import org.jacop.constraints.XgteqC;
 import org.jacop.core.BooleanVar;
 import org.jacop.core.IntVar;

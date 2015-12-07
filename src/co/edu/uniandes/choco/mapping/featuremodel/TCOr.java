@@ -7,7 +7,7 @@ import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingTCOr {
+public class TCOr {
 
 	/**
 	 * Postcondition: at least one feature should be selected under an or

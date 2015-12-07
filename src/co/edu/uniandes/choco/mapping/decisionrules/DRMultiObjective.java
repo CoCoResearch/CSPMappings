@@ -8,7 +8,7 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingDRMaximization {
+public class DRMultiObjective {
 
 	public void solveProblem() {
 		Solver solver = new Solver();
@@ -42,25 +42,52 @@ public class MappingDRMaximization {
 		IntVar e2Cost = VariableFactory.bounded("e2Cost", 0, 350, solver);
 		IntVar e3Cost = VariableFactory.bounded("e3Cost", 0, 500, solver);
 
-		IntVar[] Vars = new IntVar[9];
-		Vars[0] = A1Cost;
-		Vars[1] = A2Cost;
-		Vars[2] = C1Cost;
-		Vars[3] = C2Cost;
-		Vars[4] = C3Cost;
-		Vars[5] = E1Cost;
-		Vars[6] = e1Cost;
-		Vars[7] = e2Cost;
-		Vars[8] = e3Cost;
+		// Decision time
+		IntVar A1Time = VariableFactory.bounded("A1Time", 0, 20, solver);
+		IntVar A2Time = VariableFactory.bounded("A2Time", 0, 30, solver);
+		IntVar C1Time = VariableFactory.bounded("C1Time", 0, 10, solver);
+		IntVar C2Time = VariableFactory.bounded("C2Time", 0, 20, solver);
+		IntVar C3Time = VariableFactory.bounded("C3Time", 0, 30, solver);
+		IntVar E1Time = VariableFactory.bounded("E1Time", 0, 25, solver);
+		IntVar e1Time = VariableFactory.bounded("e1Time", 0, 15, solver);
+		IntVar e2Time = VariableFactory.bounded("e2Time", 0, 20, solver);
+		IntVar e3Time = VariableFactory.bounded("e3Time", 0, 25, solver);
 
-		int maxValue = 3650;
-		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0, maxValue,
-				solver);
+		IntVar[] Vars1 = new IntVar[9];
+		Vars1[0] = A1Cost;
+		Vars1[1] = A2Cost;
+		Vars1[2] = C1Cost;
+		Vars1[3] = C2Cost;
+		Vars1[4] = C3Cost;
+		Vars1[5] = E1Cost;
+		Vars1[6] = e1Cost;
+		Vars1[7] = e2Cost;
+		Vars1[8] = e3Cost;
 
-		solver.post(IntConstraintFactory.sum(Vars, TotalCost));
+		IntVar[] Vars2 = new IntVar[9];
+		Vars2[0] = A1Time;
+		Vars2[1] = A2Time;
+		Vars2[2] = C1Time;
+		Vars2[3] = C2Time;
+		Vars2[4] = C3Time;
+		Vars2[5] = E1Time;
+		Vars2[6] = e1Time;
+		Vars2[7] = e2Time;
+		Vars2[8] = e3Time;
+
+		int costsMaxValue = 3650;
+		IntVar TotalCost = VariableFactory.bounded("TotalCost", 0,
+				costsMaxValue, solver);
+
+		int timeMaxValue = 195;
+		IntVar TotalTime = VariableFactory.bounded("TotalTime", 0,
+				timeMaxValue, solver);
+
+		solver.post(IntConstraintFactory.sum(Vars1, TotalCost));
+		solver.post(IntConstraintFactory.sum(Vars2, TotalTime));
 
 		Chatterbox.showSolutions(solver);
-		solver.findOptimalSolution(ResolutionPolicy.MAXIMIZE, TotalCost);
+		solver.findParetoFront(ResolutionPolicy.MAXIMIZE, TotalCost, TotalTime);
 		Chatterbox.printStatistics(solver);
 	}
 }

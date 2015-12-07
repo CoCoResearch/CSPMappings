@@ -1,20 +1,18 @@
-package co.edu.uniandes.choco.mapping.decisionrules;
+package co.edu.uniandes.choco.mapping.featuremodel;
 
 import org.chocosolver.solver.Solver;
 import org.chocosolver.solver.trace.Chatterbox;
-import org.chocosolver.solver.variables.IntVar;
+import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class MappingDRFiniteRelation {
+public class TCOptional {
 
 	public void solveProblem() {
 		Solver solver = new Solver();
 
-		int[] ints = new int[3];
-		ints[0] = 3;
-		ints[1] = 6;
-		ints[2] = 7;
-		IntVar A = VariableFactory.enumerated("A", ints, solver);
+		// Optional for child feature of root node
+		BoolVar A = VariableFactory.bool("A", solver);
+		BoolVar A1 = VariableFactory.bool("A1", solver);
 
 		Chatterbox.showSolutions(solver);
 		System.out.println(solver.findAllSolutions());
