@@ -11,7 +11,7 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class Scenario04Team01 {
+public class Scenario04Team03 {
 	public void solveProblem() {
 		Solver solver = new Solver();
 
@@ -34,7 +34,7 @@ public class Scenario04Team01 {
 		BoolVar manejodeinventarios = VariableFactory.bool("manejodeinventarios", solver);
 		BoolVar manejodealmacen = VariableFactory.bool("manejodealmacen", solver);
 		BoolVar gestiondecompras = VariableFactory.bool("gestiondecompras", solver);
-		BoolVar comercioexterior = VariableFactory.bool("comercioexterior", solver);
+		BoolVar comercioexterior = (BoolVar) VariableFactory.fixed("comercioexterior", 0, solver);
 		BoolVar disminuirtiemposdeentrega = (BoolVar) VariableFactory.fixed("disminuirtiemposdeentrega", 0, solver);
 		BoolVar integracionconproveedores = (BoolVar) VariableFactory.fixed("integracionconproveedores", 0, solver);
 		BoolVar buscartendenciasyrelaciones = (BoolVar) VariableFactory.fixed("buscartendenciasyrelaciones", 0, solver);
@@ -52,10 +52,10 @@ public class Scenario04Team01 {
 		BoolVar erp_marketingyventas = (BoolVar) VariableFactory.fixed("erp_marketingyventas", 0, solver);
 		BoolVar erp_modulodegestiondeproyectos = (BoolVar) VariableFactory.fixed("erp_modulodegestiondeproyectos", 0, solver);
 		BoolVar scm_sistemadegestiondeabastecimiento = (BoolVar) VariableFactory.fixed("scm_sistemadegestiondeabastecimiento", 0, solver);
-		BoolVar contratoconelproveedor = (BoolVar) VariableFactory.fixed("contratoconelproveedor", 0, solver);
+		BoolVar contratoconelproveedor = VariableFactory.bool("contratoconelproveedor", solver);
 		BoolVar contratoconunproveedorespecializado = (BoolVar) VariableFactory.fixed("contratoconunproveedorespecializado", 0, solver);
 		BoolVar mantenimientoporcuentapropia = VariableFactory.bool("mantenimientoporcuentapropia", solver);
-		BoolVar sincontratodemantenimiento = (BoolVar) VariableFactory.fixed("sincontratodemantenimiento", 0, solver);
+		BoolVar sincontratodemantenimiento = VariableFactory.bool("sincontratodemantenimiento", solver);
 		BoolVar rfp_requestforproposal = VariableFactory.bool("rfp_requestforproposal", solver);
 		BoolVar consultoriaexterna = (BoolVar) VariableFactory.fixed("consultoriaexterna", 0, solver);
 		BoolVar evaluacioninterna = (BoolVar) VariableFactory.fixed("evaluacioninterna", 0, solver);
@@ -210,7 +210,7 @@ public class Scenario04Team01 {
 		intscontratoconelproveedorcostos[0] = 650;
 		intscontratoconelproveedorcostos[1] = 700;
 		intscontratoconelproveedorcostos[2] = 800;
-				
+		
 		featureAttributes[29][0] = VariableFactory.enumerated("contratoconelproveedorcostos", intscontratoconelproveedorcostos, solver);
 		featureAttributes[29][1] = VariableFactory.bounded("contratoconelproveedortiempo", 0, 0, solver);
 		featureAttributes[29][2] = VariableFactory.bounded("contratoconelproveedorrecursoshumanos", 0, 0, solver);
@@ -454,6 +454,11 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mejorarconocimientodelcliente, "=", 0), IntConstraintFactory.arithm(featureAttributes[5][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mejorarconocimientodelcliente, "=", 0), IntConstraintFactory.arithm(featureAttributes[5][3], "=", 0));
 
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][3], "=", 0));
+
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][1], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][2], "=", 0));
@@ -528,11 +533,6 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][1], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][3], "=", 0));
-
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][3], "=", 0));
 
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(consultoriaexterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[34][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(consultoriaexterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[34][1], "=", 0));

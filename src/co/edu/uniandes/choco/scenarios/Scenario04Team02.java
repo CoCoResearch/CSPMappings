@@ -11,7 +11,7 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class Scenario04Team01 {
+public class Scenario04Team02 {
 	public void solveProblem() {
 		Solver solver = new Solver();
 
@@ -31,14 +31,14 @@ public class Scenario04Team01 {
 		BoolVar mejorarconocimientodelcliente = (BoolVar) VariableFactory.fixed("mejorarconocimientodelcliente", 0, solver);
 		BoolVar implementarcontrolessobreprocesosfinancieros = VariableFactory.bool("implementarcontrolessobreprocesosfinancieros", solver);
 		BoolVar controlyadministraciondelpresupuesto = VariableFactory.bool("controlyadministraciondelpresupuesto", solver);
-		BoolVar manejodeinventarios = VariableFactory.bool("manejodeinventarios", solver);
-		BoolVar manejodealmacen = VariableFactory.bool("manejodealmacen", solver);
-		BoolVar gestiondecompras = VariableFactory.bool("gestiondecompras", solver);
-		BoolVar comercioexterior = VariableFactory.bool("comercioexterior", solver);
+		BoolVar manejodeinventarios = (BoolVar) VariableFactory.fixed("manejodeinventarios", 0, solver);
+		BoolVar manejodealmacen = (BoolVar) VariableFactory.fixed("manejodealmacen", 0, solver);
+		BoolVar gestiondecompras = (BoolVar) VariableFactory.fixed("gestiondecompras", 0, solver);
+		BoolVar comercioexterior = (BoolVar) VariableFactory.fixed("comercioexterior", 0, solver);
 		BoolVar disminuirtiemposdeentrega = (BoolVar) VariableFactory.fixed("disminuirtiemposdeentrega", 0, solver);
 		BoolVar integracionconproveedores = (BoolVar) VariableFactory.fixed("integracionconproveedores", 0, solver);
 		BoolVar buscartendenciasyrelaciones = (BoolVar) VariableFactory.fixed("buscartendenciasyrelaciones", 0, solver);
-		BoolVar compartirconocimiento = (BoolVar) VariableFactory.fixed("compartirconocimiento", 0, solver);
+		BoolVar compartirconocimiento = VariableFactory.bool("compartirconocimiento", solver);
 		BoolVar predecirdisponibilidades = (BoolVar) VariableFactory.fixed("predecirdisponibilidades", 0, solver);
 		BoolVar planificarcapacidades = (BoolVar) VariableFactory.fixed("planificarcapacidades", 0, solver);
 		BoolVar gestiondelademanda = (BoolVar) VariableFactory.fixed("gestiondelademanda", 0, solver);
@@ -50,7 +50,7 @@ public class Scenario04Team01 {
 		BoolVar erp_modulodeproduccion = (BoolVar) VariableFactory.fixed("erp_modulodeproduccion", 0, solver);
 		BoolVar erp_modulodeinteligenciadenegocio = (BoolVar) VariableFactory.fixed("erp_modulodeinteligenciadenegocio", 0, solver);
 		BoolVar erp_marketingyventas = (BoolVar) VariableFactory.fixed("erp_marketingyventas", 0, solver);
-		BoolVar erp_modulodegestiondeproyectos = (BoolVar) VariableFactory.fixed("erp_modulodegestiondeproyectos", 0, solver);
+		BoolVar erp_modulodegestiondeproyectos = VariableFactory.bool("erp_modulodegestiondeproyectos", solver);
 		BoolVar scm_sistemadegestiondeabastecimiento = (BoolVar) VariableFactory.fixed("scm_sistemadegestiondeabastecimiento", 0, solver);
 		BoolVar contratoconelproveedor = (BoolVar) VariableFactory.fixed("contratoconelproveedor", 0, solver);
 		BoolVar contratoconunproveedorespecializado = (BoolVar) VariableFactory.fixed("contratoconunproveedorespecializado", 0, solver);
@@ -206,28 +206,31 @@ public class Scenario04Team01 {
 		featureAttributes[28][2] = VariableFactory.bounded("scm_sistemadegestiondeabastecimientorecursoshumanos", 0, 0, solver);
 		featureAttributes[28][3] = VariableFactory.bounded("scm_sistemadegestiondeabastecimientoriesgos", 0, 0, solver);
 
-		int[] intscontratoconelproveedorcostos = new int[3];
-		intscontratoconelproveedorcostos[0] = 650;
-		intscontratoconelproveedorcostos[1] = 700;
-		intscontratoconelproveedorcostos[2] = 800;
+		int[] intscontratoconelproveedorcostos = new int[4];
+		intscontratoconelproveedorcostos[0] = 0;
+		intscontratoconelproveedorcostos[1] = 650;
+		intscontratoconelproveedorcostos[2] = 700;
+		intscontratoconelproveedorcostos[3] = 800;
 				
 		featureAttributes[29][0] = VariableFactory.enumerated("contratoconelproveedorcostos", intscontratoconelproveedorcostos, solver);
 		featureAttributes[29][1] = VariableFactory.bounded("contratoconelproveedortiempo", 0, 0, solver);
 		featureAttributes[29][2] = VariableFactory.bounded("contratoconelproveedorrecursoshumanos", 0, 0, solver);
 		featureAttributes[29][3] = VariableFactory.bounded("contratoconelproveedorriesgos", 0, 26, solver);
 
-		int[] intscontratoconunproveedorespecializadocostos = new int[2];
-		intscontratoconunproveedorespecializadocostos[0] = 800;
-		intscontratoconunproveedorespecializadocostos[1] = 950;
+		int[] intscontratoconunproveedorespecializadocostos = new int[3];
+		intscontratoconunproveedorespecializadocostos[0] = 0;
+		intscontratoconunproveedorespecializadocostos[1] = 800;
+		intscontratoconunproveedorespecializadocostos[2] = 950;
 		
-		featureAttributes[30][0] = VariableFactory.enumerated("contratoconelproveedorcostos", intscontratoconunproveedorespecializadocostos, solver);
+		featureAttributes[30][0] = VariableFactory.enumerated("contratoconunproveedorespecializadocostos", intscontratoconunproveedorespecializadocostos, solver);
 		featureAttributes[30][1] = VariableFactory.bounded("contratoconunproveedorespecializadotiempo", 0, 0, solver);
 		featureAttributes[30][2] = VariableFactory.bounded("contratoconunproveedorespecializadorecursoshumanos", 0, 0, solver);
 		featureAttributes[30][3] = VariableFactory.bounded("contratoconunproveedorespecializadoriesgos", 0, 59, solver);
 
 		int[] intsmantenimientoporcuentapropiacostos = new int[3];
-		intsmantenimientoporcuentapropiacostos[0] = 450;
-		intsmantenimientoporcuentapropiacostos[1] = 500;
+		intsmantenimientoporcuentapropiacostos[0] = 0;
+		intsmantenimientoporcuentapropiacostos[1] = 450;
+		intsmantenimientoporcuentapropiacostos[2] = 500;
 		
 		featureAttributes[31][0] = VariableFactory.enumerated("mantenimientoporcuentapropiacostos", intsmantenimientoporcuentapropiacostos, solver);
 		featureAttributes[31][1] = VariableFactory.bounded("mantenimientoporcuentapropiatiempo", 0, 0, solver);
@@ -454,6 +457,26 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mejorarconocimientodelcliente, "=", 0), IntConstraintFactory.arithm(featureAttributes[5][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mejorarconocimientodelcliente, "=", 0), IntConstraintFactory.arithm(featureAttributes[5][3], "=", 0));
 
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodeinventarios, "=", 0), IntConstraintFactory.arithm(featureAttributes[8][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodeinventarios, "=", 0), IntConstraintFactory.arithm(featureAttributes[8][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodeinventarios, "=", 0), IntConstraintFactory.arithm(featureAttributes[8][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodeinventarios, "=", 0), IntConstraintFactory.arithm(featureAttributes[8][3], "=", 0));
+
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodealmacen, "=", 0), IntConstraintFactory.arithm(featureAttributes[9][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodealmacen, "=", 0), IntConstraintFactory.arithm(featureAttributes[9][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodealmacen, "=", 0), IntConstraintFactory.arithm(featureAttributes[9][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(manejodealmacen, "=", 0), IntConstraintFactory.arithm(featureAttributes[9][3], "=", 0));
+
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(gestiondecompras, "=", 0), IntConstraintFactory.arithm(featureAttributes[10][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(gestiondecompras, "=", 0), IntConstraintFactory.arithm(featureAttributes[10][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(gestiondecompras, "=", 0), IntConstraintFactory.arithm(featureAttributes[10][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(gestiondecompras, "=", 0), IntConstraintFactory.arithm(featureAttributes[10][3], "=", 0));
+
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][3], "=", 0));
+
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][1], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][2], "=", 0));
@@ -468,11 +491,6 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(buscartendenciasyrelaciones, "=", 0), IntConstraintFactory.arithm(featureAttributes[14][1], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(buscartendenciasyrelaciones, "=", 0), IntConstraintFactory.arithm(featureAttributes[14][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(buscartendenciasyrelaciones, "=", 0), IntConstraintFactory.arithm(featureAttributes[14][3], "=", 0));
-
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(compartirconocimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[15][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(compartirconocimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[15][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(compartirconocimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[15][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(compartirconocimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[15][3], "=", 0));
 
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(predecirdisponibilidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[16][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(predecirdisponibilidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[16][1], "=", 0));
@@ -519,15 +537,20 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_marketingyventas, "=", 0), IntConstraintFactory.arithm(featureAttributes[26][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_marketingyventas, "=", 0), IntConstraintFactory.arithm(featureAttributes[26][3], "=", 0));
 
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][3], "=", 0));
-
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][1], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][3], "=", 0));
+
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconelproveedor, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconelproveedor, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconelproveedor, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconelproveedor, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][3], "=", 0));
+
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconunproveedorespecializado, "=", 0), IntConstraintFactory.arithm(featureAttributes[30][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconunproveedorespecializado, "=", 0), IntConstraintFactory.arithm(featureAttributes[30][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconunproveedorespecializado, "=", 0), IntConstraintFactory.arithm(featureAttributes[30][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(contratoconunproveedorespecializado, "=", 0), IntConstraintFactory.arithm(featureAttributes[30][3], "=", 0));
 
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][1], "=", 0));

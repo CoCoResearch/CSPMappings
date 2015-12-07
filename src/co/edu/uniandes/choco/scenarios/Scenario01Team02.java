@@ -11,7 +11,7 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.VariableFactory;
 
-public class Scenario04Team01 {
+public class Scenario01Team02 {
 	public void solveProblem() {
 		Solver solver = new Solver();
 
@@ -19,8 +19,8 @@ public class Scenario04Team01 {
 		BoolVar inversionti = VariableFactory.bool("inversionti", solver);
 		BoolVar motivadoresdenegocio = (BoolVar) VariableFactory.fixed("motivadoresdenegocio", 1, solver);
 		BoolVar sistemasempresariales = (BoolVar) VariableFactory.fixed("sistemasempresariales", 1, solver);
-		BoolVar mantenimiento = (BoolVar) VariableFactory.fixed("mantenimiento", 1, solver);
-		BoolVar modelodeseleccion = (BoolVar) VariableFactory.fixed("modelodeseleccion", 1, solver);
+		BoolVar nuevovsexistente = (BoolVar) VariableFactory.fixed("nuevovsexistente", 1, solver);
+		BoolVar tercerizacion = (BoolVar) VariableFactory.fixed("tercerizacion", 1, solver);
 		BoolVar crm_customerrelationshipmanagement = (BoolVar) VariableFactory.fixed("crm_customerrelationshipmanagement", 0, solver);
 		BoolVar erp_enterpriseresourceplanning = VariableFactory.bool("erp_enterpriseresourceplanning", solver);
 		BoolVar segmentarydepurarclientes = (BoolVar) VariableFactory.fixed("segmentarydepurarclientes", 0, solver);
@@ -30,17 +30,17 @@ public class Scenario04Team01 {
 		BoolVar mejorarretenciondeclientes = (BoolVar) VariableFactory.fixed("mejorarretenciondeclientes", 0, solver);
 		BoolVar mejorarconocimientodelcliente = (BoolVar) VariableFactory.fixed("mejorarconocimientodelcliente", 0, solver);
 		BoolVar implementarcontrolessobreprocesosfinancieros = VariableFactory.bool("implementarcontrolessobreprocesosfinancieros", solver);
-		BoolVar controlyadministraciondelpresupuesto = VariableFactory.bool("controlyadministraciondelpresupuesto", solver);
+		BoolVar controlyadministraciondelpresupuesto = (BoolVar) VariableFactory.fixed("controlyadministraciondelpresupuesto", 0, solver);
 		BoolVar manejodeinventarios = VariableFactory.bool("manejodeinventarios", solver);
 		BoolVar manejodealmacen = VariableFactory.bool("manejodealmacen", solver);
 		BoolVar gestiondecompras = VariableFactory.bool("gestiondecompras", solver);
-		BoolVar comercioexterior = VariableFactory.bool("comercioexterior", solver);
+		BoolVar comercioexterior = (BoolVar) VariableFactory.fixed("comercioexterior", 0, solver);
 		BoolVar disminuirtiemposdeentrega = (BoolVar) VariableFactory.fixed("disminuirtiemposdeentrega", 0, solver);
-		BoolVar integracionconproveedores = (BoolVar) VariableFactory.fixed("integracionconproveedores", 0, solver);
+		BoolVar integracionconproveedores = VariableFactory.bool("integracionconproveedores", solver);
 		BoolVar buscartendenciasyrelaciones = (BoolVar) VariableFactory.fixed("buscartendenciasyrelaciones", 0, solver);
 		BoolVar compartirconocimiento = (BoolVar) VariableFactory.fixed("compartirconocimiento", 0, solver);
-		BoolVar predecirdisponibilidades = (BoolVar) VariableFactory.fixed("predecirdisponibilidades", 0, solver);
-		BoolVar planificarcapacidades = (BoolVar) VariableFactory.fixed("planificarcapacidades", 0, solver);
+		BoolVar predecirdisponibilidades = VariableFactory.bool("predecirdisponibilidades", solver);
+		BoolVar planificarcapacidades = VariableFactory.bool("planificarcapacidades", solver);
 		BoolVar gestiondelademanda = (BoolVar) VariableFactory.fixed("gestiondelademanda", 0, solver);
 		BoolVar crm_modulomarketing = (BoolVar) VariableFactory.fixed("crm_modulomarketing", 0, solver);
 		BoolVar crm_moduloventas = (BoolVar) VariableFactory.fixed("crm_moduloventas", 0, solver);
@@ -50,18 +50,17 @@ public class Scenario04Team01 {
 		BoolVar erp_modulodeproduccion = (BoolVar) VariableFactory.fixed("erp_modulodeproduccion", 0, solver);
 		BoolVar erp_modulodeinteligenciadenegocio = (BoolVar) VariableFactory.fixed("erp_modulodeinteligenciadenegocio", 0, solver);
 		BoolVar erp_marketingyventas = (BoolVar) VariableFactory.fixed("erp_marketingyventas", 0, solver);
-		BoolVar erp_modulodegestiondeproyectos = (BoolVar) VariableFactory.fixed("erp_modulodegestiondeproyectos", 0, solver);
-		BoolVar scm_sistemadegestiondeabastecimiento = (BoolVar) VariableFactory.fixed("scm_sistemadegestiondeabastecimiento", 0, solver);
-		BoolVar contratoconelproveedor = (BoolVar) VariableFactory.fixed("contratoconelproveedor", 0, solver);
-		BoolVar contratoconunproveedorespecializado = (BoolVar) VariableFactory.fixed("contratoconunproveedorespecializado", 0, solver);
-		BoolVar mantenimientoporcuentapropia = VariableFactory.bool("mantenimientoporcuentapropia", solver);
-		BoolVar sincontratodemantenimiento = (BoolVar) VariableFactory.fixed("sincontratodemantenimiento", 0, solver);
-		BoolVar rfp_requestforproposal = VariableFactory.bool("rfp_requestforproposal", solver);
-		BoolVar consultoriaexterna = (BoolVar) VariableFactory.fixed("consultoriaexterna", 0, solver);
-		BoolVar evaluacioninterna = (BoolVar) VariableFactory.fixed("evaluacioninterna", 0, solver);
+		BoolVar erp_modulodegestiondeproyectos = VariableFactory.bool("erp_modulodegestiondeproyectos", solver);
+		BoolVar scm_sistemadegestiondeabastecimiento = VariableFactory.bool("scm_sistemadegestiondeabastecimiento", solver);
+		BoolVar adquirirsistemanuevo = (BoolVar) VariableFactory.fixed("adquirirsistemanuevo", 0, solver);
+		BoolVar adaptarsistemaexistente = VariableFactory.bool("adaptarsistemaexistente", solver);
+		BoolVar subcontratarpersonalizacion = (BoolVar) VariableFactory.fixed("subcontratarpersonalizacion", 0, solver);
+		BoolVar subcontratarpartedeldesarrolloeintegracion = VariableFactory.bool("subcontratarpartedeldesarrolloeintegracion", solver);
+		BoolVar subcontratarlaadministraciondeunprocesodenegociocompleto = (BoolVar) VariableFactory.fixed("subcontratarlaadministraciondeunprocesodenegociocompleto", 0, solver);
+		BoolVar subcontratargerenciadelproyectodeimplementacion = VariableFactory.bool("subcontratargerenciadelproyectodeimplementacion", solver);
 
 		// FEATURE ATTRIBUTES (Variables & Domains)
-		IntVar[][] featureAttributes = new IntVar[36][4];featureAttributes[0][0] = VariableFactory.bounded("segmentarydepurarclientescostos", 0, 0, solver);
+		IntVar[][] featureAttributes = new IntVar[35][4];featureAttributes[0][0] = VariableFactory.bounded("segmentarydepurarclientescostos", 0, 0, solver);
 		featureAttributes[0][1] = VariableFactory.bounded("segmentarydepurarclientestiempo", 0, 0, solver);
 		featureAttributes[0][2] = VariableFactory.bounded("segmentarydepurarclientesrecursoshumanos", 0, 0, solver);
 		featureAttributes[0][3] = VariableFactory.bounded("segmentarydepurarclientesriesgos", 0, 0, solver);
@@ -206,53 +205,35 @@ public class Scenario04Team01 {
 		featureAttributes[28][2] = VariableFactory.bounded("scm_sistemadegestiondeabastecimientorecursoshumanos", 0, 0, solver);
 		featureAttributes[28][3] = VariableFactory.bounded("scm_sistemadegestiondeabastecimientoriesgos", 0, 0, solver);
 
-		int[] intscontratoconelproveedorcostos = new int[3];
-		intscontratoconelproveedorcostos[0] = 650;
-		intscontratoconelproveedorcostos[1] = 700;
-		intscontratoconelproveedorcostos[2] = 800;
-				
-		featureAttributes[29][0] = VariableFactory.enumerated("contratoconelproveedorcostos", intscontratoconelproveedorcostos, solver);
-		featureAttributes[29][1] = VariableFactory.bounded("contratoconelproveedortiempo", 0, 0, solver);
-		featureAttributes[29][2] = VariableFactory.bounded("contratoconelproveedorrecursoshumanos", 0, 0, solver);
-		featureAttributes[29][3] = VariableFactory.bounded("contratoconelproveedorriesgos", 0, 26, solver);
+		featureAttributes[29][0] = VariableFactory.bounded("adquirirsistemanuevocostos", 0, 0, solver);
+		featureAttributes[29][1] = VariableFactory.bounded("adquirirsistemanuevotiempo", 0, 0, solver);
+		featureAttributes[29][2] = VariableFactory.bounded("adquirirsistemanuevorecursoshumanos", 0, 3, solver);
+		featureAttributes[29][3] = VariableFactory.bounded("adquirirsistemanuevoriesgos", 0, 109, solver);
 
-		int[] intscontratoconunproveedorespecializadocostos = new int[2];
-		intscontratoconunproveedorespecializadocostos[0] = 800;
-		intscontratoconunproveedorespecializadocostos[1] = 950;
-		
-		featureAttributes[30][0] = VariableFactory.enumerated("contratoconelproveedorcostos", intscontratoconunproveedorespecializadocostos, solver);
-		featureAttributes[30][1] = VariableFactory.bounded("contratoconunproveedorespecializadotiempo", 0, 0, solver);
-		featureAttributes[30][2] = VariableFactory.bounded("contratoconunproveedorespecializadorecursoshumanos", 0, 0, solver);
-		featureAttributes[30][3] = VariableFactory.bounded("contratoconunproveedorespecializadoriesgos", 0, 59, solver);
+		featureAttributes[30][0] = VariableFactory.bounded("adaptarsistemaexistentecostos", 0, 0, solver);
+		featureAttributes[30][1] = VariableFactory.bounded("adaptarsistemaexistentetiempo", 0, 0, solver);
+		featureAttributes[30][2] = VariableFactory.bounded("adaptarsistemaexistenterecursoshumanos", 0, 2, solver);
+		featureAttributes[30][3] = VariableFactory.bounded("adaptarsistemaexistenteriesgos", 0, 74, solver);
 
-		int[] intsmantenimientoporcuentapropiacostos = new int[3];
-		intsmantenimientoporcuentapropiacostos[0] = 450;
-		intsmantenimientoporcuentapropiacostos[1] = 500;
-		
-		featureAttributes[31][0] = VariableFactory.enumerated("mantenimientoporcuentapropiacostos", intsmantenimientoporcuentapropiacostos, solver);
-		featureAttributes[31][1] = VariableFactory.bounded("mantenimientoporcuentapropiatiempo", 0, 0, solver);
-		featureAttributes[31][2] = VariableFactory.bounded("mantenimientoporcuentapropiarecursoshumanos", 0, 0, solver);
-		featureAttributes[31][3] = VariableFactory.bounded("mantenimientoporcuentapropiariesgos", 0, 27, solver);
+		featureAttributes[31][0] = VariableFactory.bounded("subcontratarpersonalizacioncostos", 0, 200000, solver);
+		featureAttributes[31][1] = VariableFactory.bounded("subcontratarpersonalizaciontiempo", 0, 0, solver);
+		featureAttributes[31][2] = VariableFactory.bounded("subcontratarpersonalizacionrecursoshumanos", 0, 10, solver);
+		featureAttributes[31][3] = VariableFactory.bounded("subcontratarpersonalizacionriesgos", 0, 113, solver);
 
-		featureAttributes[32][0] = VariableFactory.bounded("sincontratodemantenimientocostos", 0, 0, solver);
-		featureAttributes[32][1] = VariableFactory.bounded("sincontratodemantenimientotiempo", 0, 0, solver);
-		featureAttributes[32][2] = VariableFactory.bounded("sincontratodemantenimientorecursoshumanos", 0, 0, solver);
-		featureAttributes[32][3] = VariableFactory.bounded("sincontratodemantenimientoriesgos", 0, 82, solver);
+		featureAttributes[32][0] = VariableFactory.bounded("subcontratarpartedeldesarrolloeintegracioncostos", 0, 300000, solver);
+		featureAttributes[32][1] = VariableFactory.bounded("subcontratarpartedeldesarrolloeintegraciontiempo", 0, 0, solver);
+		featureAttributes[32][2] = VariableFactory.bounded("subcontratarpartedeldesarrolloeintegracionrecursoshumanos", 0, 5, solver);
+		featureAttributes[32][3] = VariableFactory.bounded("subcontratarpartedeldesarrolloeintegracionriesgos", 0, 113, solver);
 
-		featureAttributes[33][0] = VariableFactory.bounded("rfp_requestforproposalcostos", 0, 300, solver);
-		featureAttributes[33][1] = VariableFactory.bounded("rfp_requestforproposaltiempo", 0, 0, solver);
-		featureAttributes[33][2] = VariableFactory.bounded("rfp_requestforproposalrecursoshumanos", 0, 0, solver);
-		featureAttributes[33][3] = VariableFactory.bounded("rfp_requestforproposalriesgos", 0, 8, solver);
+		featureAttributes[33][0] = VariableFactory.bounded("subcontratarlaadministraciondeunprocesodenegociocompletocostos", 0, 200000, solver);
+		featureAttributes[33][1] = VariableFactory.bounded("subcontratarlaadministraciondeunprocesodenegociocompletotiempo", 0, 0, solver);
+		featureAttributes[33][2] = VariableFactory.bounded("subcontratarlaadministraciondeunprocesodenegociocompletorecursoshumanos", 0, 7, solver);
+		featureAttributes[33][3] = VariableFactory.bounded("subcontratarlaadministraciondeunprocesodenegociocompletoriesgos", 0, 113, solver);
 
-		featureAttributes[34][0] = VariableFactory.bounded("consultoriaexternacostos", 0, 100000, solver);
-		featureAttributes[34][1] = VariableFactory.bounded("consultoriaexternatiempo", 0, 0, solver);
-		featureAttributes[34][2] = VariableFactory.bounded("consultoriaexternarecursoshumanos", 0, 0, solver);
-		featureAttributes[34][3] = VariableFactory.bounded("consultoriaexternariesgos", 0, 11, solver);
-
-		featureAttributes[35][0] = VariableFactory.bounded("evaluacioninternacostos", 0, 500, solver);
-		featureAttributes[35][1] = VariableFactory.bounded("evaluacioninternatiempo", 0, 0, solver);
-		featureAttributes[35][2] = VariableFactory.bounded("evaluacioninternarecursoshumanos", 0, 0, solver);
-		featureAttributes[35][3] = VariableFactory.bounded("evaluacioninternariesgos", 0, 34, solver);
+		featureAttributes[34][0] = VariableFactory.bounded("subcontratargerenciadelproyectodeimplementacioncostos", 0, 150000, solver);
+		featureAttributes[34][1] = VariableFactory.bounded("subcontratargerenciadelproyectodeimplementaciontiempo", 0, 0, solver);
+		featureAttributes[34][2] = VariableFactory.bounded("subcontratargerenciadelproyectodeimplementacionrecursoshumanos", 0, 5, solver);
+		featureAttributes[34][3] = VariableFactory.bounded("subcontratargerenciadelproyectodeimplementacionriesgos", 0, 96, solver);
 
 
 		// FEATURE MODEL CONSTRAINTS (Constraints
@@ -279,15 +260,6 @@ public class Scenario04Team01 {
 		varsOr0[18] = gestiondelademanda;
 		SatFactory.addClauses(LogOp.or(varsOr0), solver);
 
-		BoolVar[] varsOr2 = new BoolVar[6];
-		varsOr2[0] = erp_modulofinanciero;
-		varsOr2[1] = erp_moduloadministrativo;
-		varsOr2[2] = erp_modulodeproduccion;
-		varsOr2[3] = erp_modulodeinteligenciadenegocio;
-		varsOr2[4] = erp_marketingyventas;
-		varsOr2[5] = erp_modulodegestiondeproyectos;
-		SatFactory.addClauses(LogOp.or(varsOr2), solver);
-
 
 		// Alternative constraints
 		BoolVar[] varsXor0 = new BoolVar[3];
@@ -299,26 +271,23 @@ public class Scenario04Team01 {
 		varsXor0[2] = scm_sistemadegestiondeabastecimiento;
 		SatFactory.addClauses(LogOp.or(varsXor0), solver);
 
-		BoolVar[] varsXor1 = new BoolVar[4];
-		varsXor1[0] = contratoconelproveedor;
-		SatFactory.addClauses(LogOp.implies(contratoconelproveedor, LogOp.nor(contratoconunproveedorespecializado)), solver);
-		SatFactory.addClauses(LogOp.implies(contratoconelproveedor, LogOp.nor(mantenimientoporcuentapropia)), solver);
-		SatFactory.addClauses(LogOp.implies(contratoconelproveedor, LogOp.nor(sincontratodemantenimiento)), solver);
-		varsXor1[1] = contratoconunproveedorespecializado;
-		SatFactory.addClauses(LogOp.implies(contratoconunproveedorespecializado, LogOp.nor(mantenimientoporcuentapropia)), solver);
-		SatFactory.addClauses(LogOp.implies(contratoconunproveedorespecializado, LogOp.nor(sincontratodemantenimiento)), solver);
-		varsXor1[2] = mantenimientoporcuentapropia;
-		SatFactory.addClauses(LogOp.implies(mantenimientoporcuentapropia, LogOp.nor(sincontratodemantenimiento)), solver);
-		varsXor1[3] = sincontratodemantenimiento;
+		BoolVar[] varsXor1 = new BoolVar[2];
+		varsXor1[0] = adquirirsistemanuevo;
+		SatFactory.addClauses(LogOp.implies(adquirirsistemanuevo, LogOp.nor(adaptarsistemaexistente)), solver);
+		varsXor1[1] = adaptarsistemaexistente;
 		SatFactory.addClauses(LogOp.or(varsXor1), solver);
 
-		BoolVar[] varsXor2 = new BoolVar[3];
-		varsXor2[0] = rfp_requestforproposal;
-		SatFactory.addClauses(LogOp.implies(rfp_requestforproposal, LogOp.nor(consultoriaexterna)), solver);
-		SatFactory.addClauses(LogOp.implies(rfp_requestforproposal, LogOp.nor(evaluacioninterna)), solver);
-		varsXor2[1] = consultoriaexterna;
-		SatFactory.addClauses(LogOp.implies(consultoriaexterna, LogOp.nor(evaluacioninterna)), solver);
-		varsXor2[2] = evaluacioninterna;
+		BoolVar[] varsXor2 = new BoolVar[4];
+		varsXor2[0] = subcontratarpersonalizacion;
+		SatFactory.addClauses(LogOp.implies(subcontratarpersonalizacion, LogOp.nor(subcontratarpartedeldesarrolloeintegracion)), solver);
+		SatFactory.addClauses(LogOp.implies(subcontratarpersonalizacion, LogOp.nor(subcontratarlaadministraciondeunprocesodenegociocompleto)), solver);
+		SatFactory.addClauses(LogOp.implies(subcontratarpersonalizacion, LogOp.nor(subcontratargerenciadelproyectodeimplementacion)), solver);
+		varsXor2[1] = subcontratarpartedeldesarrolloeintegracion;
+		SatFactory.addClauses(LogOp.implies(subcontratarpartedeldesarrolloeintegracion, LogOp.nor(subcontratarlaadministraciondeunprocesodenegociocompleto)), solver);
+		SatFactory.addClauses(LogOp.implies(subcontratarpartedeldesarrolloeintegracion, LogOp.nor(subcontratargerenciadelproyectodeimplementacion)), solver);
+		varsXor2[2] = subcontratarlaadministraciondeunprocesodenegociocompleto;
+		SatFactory.addClauses(LogOp.implies(subcontratarlaadministraciondeunprocesodenegociocompleto, LogOp.nor(subcontratargerenciadelproyectodeimplementacion)), solver);
+		varsXor2[3] = subcontratargerenciadelproyectodeimplementacion;
 		SatFactory.addClauses(LogOp.or(varsXor2), solver);
 
 
@@ -339,10 +308,10 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(inversionti, "=", 0), IntConstraintFactory.arithm(motivadoresdenegocio, "=", 0));
 		SatFactory.addClauses(LogOp.implies(sistemasempresariales, inversionti), solver);
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(inversionti, "=", 0), IntConstraintFactory.arithm(sistemasempresariales, "=", 0));
-		SatFactory.addClauses(LogOp.implies(mantenimiento, inversionti), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(inversionti, "=", 0), IntConstraintFactory.arithm(mantenimiento, "=", 0));
-		SatFactory.addClauses(LogOp.implies(modelodeseleccion, inversionti), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(inversionti, "=", 0), IntConstraintFactory.arithm(modelodeseleccion, "=", 0));
+		SatFactory.addClauses(LogOp.implies(nuevovsexistente, inversionti), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(inversionti, "=", 0), IntConstraintFactory.arithm(nuevovsexistente, "=", 0));
+		SatFactory.addClauses(LogOp.implies(tercerizacion, inversionti), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(inversionti, "=", 0), IntConstraintFactory.arithm(tercerizacion, "=", 0));
 
 		// Parent-children constraints
 		SatFactory.addClauses(LogOp.implies(segmentarydepurarclientes, motivadoresdenegocio), solver);
@@ -409,20 +378,18 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sistemasempresariales, "=", 0), IntConstraintFactory.arithm(erp_enterpriseresourceplanning, "=", 0));
 		SatFactory.addClauses(LogOp.implies(scm_sistemadegestiondeabastecimiento, sistemasempresariales), solver);
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sistemasempresariales, "=", 0), IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0));
-		SatFactory.addClauses(LogOp.implies(contratoconelproveedor, mantenimiento), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mantenimiento, "=", 0), IntConstraintFactory.arithm(contratoconelproveedor, "=", 0));
-		SatFactory.addClauses(LogOp.implies(contratoconunproveedorespecializado, mantenimiento), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mantenimiento, "=", 0), IntConstraintFactory.arithm(contratoconunproveedorespecializado, "=", 0));
-		SatFactory.addClauses(LogOp.implies(mantenimientoporcuentapropia, mantenimiento), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mantenimiento, "=", 0), IntConstraintFactory.arithm(mantenimientoporcuentapropia, "=", 0));
-		SatFactory.addClauses(LogOp.implies(sincontratodemantenimiento, mantenimiento), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mantenimiento, "=", 0), IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0));
-		SatFactory.addClauses(LogOp.implies(rfp_requestforproposal, modelodeseleccion), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(modelodeseleccion, "=", 0), IntConstraintFactory.arithm(rfp_requestforproposal, "=", 0));
-		SatFactory.addClauses(LogOp.implies(consultoriaexterna, modelodeseleccion), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(modelodeseleccion, "=", 0), IntConstraintFactory.arithm(consultoriaexterna, "=", 0));
-		SatFactory.addClauses(LogOp.implies(evaluacioninterna, modelodeseleccion), solver);
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(modelodeseleccion, "=", 0), IntConstraintFactory.arithm(evaluacioninterna, "=", 0));
+		SatFactory.addClauses(LogOp.implies(adquirirsistemanuevo, nuevovsexistente), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(nuevovsexistente, "=", 0), IntConstraintFactory.arithm(adquirirsistemanuevo, "=", 0));
+		SatFactory.addClauses(LogOp.implies(adaptarsistemaexistente, nuevovsexistente), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(nuevovsexistente, "=", 0), IntConstraintFactory.arithm(adaptarsistemaexistente, "=", 0));
+		SatFactory.addClauses(LogOp.implies(subcontratarpersonalizacion, tercerizacion), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(tercerizacion, "=", 0), IntConstraintFactory.arithm(subcontratarpersonalizacion, "=", 0));
+		SatFactory.addClauses(LogOp.implies(subcontratarpartedeldesarrolloeintegracion, tercerizacion), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(tercerizacion, "=", 0), IntConstraintFactory.arithm(subcontratarpartedeldesarrolloeintegracion, "=", 0));
+		SatFactory.addClauses(LogOp.implies(subcontratarlaadministraciondeunprocesodenegociocompleto, tercerizacion), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(tercerizacion, "=", 0), IntConstraintFactory.arithm(subcontratarlaadministraciondeunprocesodenegociocompleto, "=", 0));
+		SatFactory.addClauses(LogOp.implies(subcontratargerenciadelproyectodeimplementacion, tercerizacion), solver);
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(tercerizacion, "=", 0), IntConstraintFactory.arithm(subcontratargerenciadelproyectodeimplementacion, "=", 0));
 
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(segmentarydepurarclientes, "=", 0), IntConstraintFactory.arithm(featureAttributes[0][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(segmentarydepurarclientes, "=", 0), IntConstraintFactory.arithm(featureAttributes[0][1], "=", 0));
@@ -454,15 +421,20 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mejorarconocimientodelcliente, "=", 0), IntConstraintFactory.arithm(featureAttributes[5][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(mejorarconocimientodelcliente, "=", 0), IntConstraintFactory.arithm(featureAttributes[5][3], "=", 0));
 
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(controlyadministraciondelpresupuesto, "=", 0), IntConstraintFactory.arithm(featureAttributes[7][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(controlyadministraciondelpresupuesto, "=", 0), IntConstraintFactory.arithm(featureAttributes[7][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(controlyadministraciondelpresupuesto, "=", 0), IntConstraintFactory.arithm(featureAttributes[7][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(controlyadministraciondelpresupuesto, "=", 0), IntConstraintFactory.arithm(featureAttributes[7][3], "=", 0));
+
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(comercioexterior, "=", 0), IntConstraintFactory.arithm(featureAttributes[11][3], "=", 0));
+
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][1], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(disminuirtiemposdeentrega, "=", 0), IntConstraintFactory.arithm(featureAttributes[12][3], "=", 0));
-
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(integracionconproveedores, "=", 0), IntConstraintFactory.arithm(featureAttributes[13][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(integracionconproveedores, "=", 0), IntConstraintFactory.arithm(featureAttributes[13][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(integracionconproveedores, "=", 0), IntConstraintFactory.arithm(featureAttributes[13][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(integracionconproveedores, "=", 0), IntConstraintFactory.arithm(featureAttributes[13][3], "=", 0));
 
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(buscartendenciasyrelaciones, "=", 0), IntConstraintFactory.arithm(featureAttributes[14][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(buscartendenciasyrelaciones, "=", 0), IntConstraintFactory.arithm(featureAttributes[14][1], "=", 0));
@@ -473,16 +445,6 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(compartirconocimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[15][1], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(compartirconocimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[15][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(compartirconocimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[15][3], "=", 0));
-
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(predecirdisponibilidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[16][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(predecirdisponibilidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[16][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(predecirdisponibilidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[16][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(predecirdisponibilidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[16][3], "=", 0));
-
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(planificarcapacidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[17][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(planificarcapacidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[17][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(planificarcapacidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[17][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(planificarcapacidades, "=", 0), IntConstraintFactory.arithm(featureAttributes[17][3], "=", 0));
 
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(gestiondelademanda, "=", 0), IntConstraintFactory.arithm(featureAttributes[18][0], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(gestiondelademanda, "=", 0), IntConstraintFactory.arithm(featureAttributes[18][1], "=", 0));
@@ -519,44 +481,44 @@ public class Scenario04Team01 {
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_marketingyventas, "=", 0), IntConstraintFactory.arithm(featureAttributes[26][2], "=", 0));
 		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_marketingyventas, "=", 0), IntConstraintFactory.arithm(featureAttributes[26][3], "=", 0));
 
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(erp_modulodegestiondeproyectos, "=", 0), IntConstraintFactory.arithm(featureAttributes[27][3], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(adquirirsistemanuevo, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(adquirirsistemanuevo, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(adquirirsistemanuevo, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(adquirirsistemanuevo, "=", 0), IntConstraintFactory.arithm(featureAttributes[29][3], "=", 0));
 
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(scm_sistemadegestiondeabastecimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[28][3], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarpersonalizacion, "=", 0), IntConstraintFactory.arithm(featureAttributes[31][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarpersonalizacion, "=", 0), IntConstraintFactory.arithm(featureAttributes[31][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarpersonalizacion, "=", 0), IntConstraintFactory.arithm(featureAttributes[31][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarpersonalizacion, "=", 0), IntConstraintFactory.arithm(featureAttributes[31][3], "=", 0));
 
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(sincontratodemantenimiento, "=", 0), IntConstraintFactory.arithm(featureAttributes[32][3], "=", 0));
-
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(consultoriaexterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[34][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(consultoriaexterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[34][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(consultoriaexterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[34][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(consultoriaexterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[34][3], "=", 0));
-
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(evaluacioninterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[35][0], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(evaluacioninterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[35][1], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(evaluacioninterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[35][2], "=", 0));
-		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(evaluacioninterna, "=", 0), IntConstraintFactory.arithm(featureAttributes[35][3], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarlaadministraciondeunprocesodenegociocompleto, "=", 0), IntConstraintFactory.arithm(featureAttributes[33][0], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarlaadministraciondeunprocesodenegociocompleto, "=", 0), IntConstraintFactory.arithm(featureAttributes[33][1], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarlaadministraciondeunprocesodenegociocompleto, "=", 0), IntConstraintFactory.arithm(featureAttributes[33][2], "=", 0));
+		LogicalConstraintFactory.ifThen(IntConstraintFactory.arithm(subcontratarlaadministraciondeunprocesodenegociocompleto, "=", 0), IntConstraintFactory.arithm(featureAttributes[33][3], "=", 0));
 
 		IntVar[] varCostos = new IntVar[featureAttributes.length];
+		IntVar[] varTiempo = new IntVar[featureAttributes.length];
 		int maxCostos = 0;
+		int maxTiempo = 0;
 		
 		for (int i = 0; i < featureAttributes.length; i ++) {
 			varCostos [i] = featureAttributes[i][0];
+			varTiempo [i] = featureAttributes[i][1];
+			
 			maxCostos += featureAttributes[i][0].getDomainSize();
+			maxTiempo += featureAttributes[i][1].getDomainSize();
 		}
 		
-		IntVar totalCostos = VariableFactory.bounded("totalCostos", 0, maxCostos, solver);
+		System.out.println("Max costos: " + maxCostos);
+		System.out.println("Max tiempo: " + maxTiempo);
+		IntVar totalCostos = VariableFactory.bounded("TotalCost", 0, maxCostos, solver);
+		IntVar totalTiempo = VariableFactory.bounded("TotalCost", 0, maxTiempo, solver);
+		
 		solver.post(IntConstraintFactory.sum(varCostos, totalCostos));
+		solver.post(IntConstraintFactory.sum(varTiempo, totalTiempo));
 
 		Chatterbox.showSolutions(solver);
-		solver.findOptimalSolution(ResolutionPolicy.MINIMIZE, totalCostos);
+		solver.findParetoFront(ResolutionPolicy.MINIMIZE, totalCostos, totalTiempo);
 		Chatterbox.printStatistics(solver);
 	}
 }
