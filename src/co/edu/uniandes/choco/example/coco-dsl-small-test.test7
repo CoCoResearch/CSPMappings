@@ -1,0 +1,57 @@
+Attribute_Types {
+	Time { 
+		int value;
+		String unitMeasure;
+	}
+	
+	Security {
+		double value;
+		String unitMeasure;
+	}
+	
+	Costs {
+		double value;
+		String unitMeasure;
+	}
+}
+
+Feature_Attributes {
+	Costs c1 = {'100', USD,};
+	Costs c2 = {'250', USD,};
+	Costs c3 = {'375', USD,};
+	Costs c4 = {'150', USD,};
+	Costs c5 = {'450', USD,};
+	Costs c6 = {'150', USD,};
+	Costs c7 = {'500', USD,};
+	Costs c8 = {'500', USD,};
+	Time t1 = {'1', Months,};
+	Time t2 = {'2', Months,};
+	Time t3 = {'6', Months,};
+	Time t4 = {'12', Months,};
+	Security s1 = {'1', NA,};
+	Security s2 = {'2', NA,};
+	Security s3 = {'3', NA,};
+	Security s4 = {'4', NA,};
+	Security s5 = {'5', NA,};
+}
+
+Features {
+	feature Root_D;
+	feature Root_A1 hasAttributes : c1, t1, s1,;
+	feature Root_A2 hasAttributes : c2, t2, s2,;
+   	feature Root_A3 hasAttributes : c3, t1, s3,;
+   	feature Root_B hasAttributes : c4, t4, s4,;
+   	feature Root_C1 hasAttributes : c5, t4, s4,;
+   	feature Root_C2 hasAttributes : c6, t3, s4,;
+   	feature Root_C3 hasAttributes : c7, t3, s5,;
+   	feature Root_D1 hasAttributes : c8, t3, s5,;
+   	feature Root_D2 hasAttributes : c4, t3, s5,;
+}
+
+Decision_Rules {
+	optimization R1 : minimize Costs;
+	hardLimit R2 : Time geq 1 lt 24;
+	selectionState R3 : Root_A1 mandatory;
+	selectionState R4 : Root_D preferred;
+	selectionState R5 : Root_C2 forbidden;
+}

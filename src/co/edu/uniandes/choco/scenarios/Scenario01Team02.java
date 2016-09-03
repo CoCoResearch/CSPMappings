@@ -238,7 +238,7 @@ public class Scenario01Team02 {
 
 		// FEATURE MODEL CONSTRAINTS (Constraints
 		// Or constraints
-		BoolVar[] varsOr0 = new BoolVar[19];
+		/*BoolVar[] varsOr0 = new BoolVar[19];
 		varsOr0[0] = segmentarydepurarclientes;
 		varsOr0[1] = analisisdemarketing;
 		varsOr0[2] = gestiondecampanias;
@@ -288,7 +288,7 @@ public class Scenario01Team02 {
 		varsXor2[2] = subcontratarlaadministraciondeunprocesodenegociocompleto;
 		SatFactory.addClauses(LogOp.implies(subcontratarlaadministraciondeunprocesodenegociocompleto, LogOp.nor(subcontratargerenciadelproyectodeimplementacion)), solver);
 		varsXor2[3] = subcontratargerenciadelproyectodeimplementacion;
-		SatFactory.addClauses(LogOp.or(varsXor2), solver);
+		SatFactory.addClauses(LogOp.or(varsXor2), solver);*/
 
 
 		// Require constraints

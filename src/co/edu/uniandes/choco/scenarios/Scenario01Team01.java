@@ -1,11 +1,14 @@
 package co.edu.uniandes.choco.scenarios;
 
+import java.util.List;
+
 import org.chocosolver.solver.ResolutionPolicy;
 import org.chocosolver.solver.Solver;
 import org.chocosolver.solver.constraints.IntConstraintFactory;
 import org.chocosolver.solver.constraints.LogicalConstraintFactory;
 import org.chocosolver.solver.constraints.SatFactory;
 import org.chocosolver.solver.constraints.nary.cnf.LogOp;
+import org.chocosolver.solver.search.solution.Solution;
 import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
@@ -529,5 +532,23 @@ public class Scenario01Team01 {
 		Chatterbox.showSolutions(solver);
 		solver.findParetoFront(ResolutionPolicy.MINIMIZE, totalCostos, totalTiempo);
 		Chatterbox.printStatistics(solver);
+		List<Solution> solutions = solver.getSolutionRecorder().getSolutions();
+		
+		for (int i = 0; i < solutions.size(); i++) {
+			//solver.restoreSolution(solutions.get(i));
+			//IntVar[] vars = solver.retrieveIntVars();
+			BoolVar[] bools = solver.retrieveBoolVars();
+			
+			System.out.println("Solution " + i + ": ");
+
+			for (int j = 0; j < bools.length; j++) {
+				if(bools[j].getValue() == 1 && !bools[j].getName().startsWith("Reqs")) {
+					
+					System.out.println(bools[j].getName() + " : " + bools[j].getValue());
+				}	
+			}
+
+		System.out.println("Done");
+	} 
 	}
 }

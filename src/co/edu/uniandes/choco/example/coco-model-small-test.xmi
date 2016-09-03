@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coCoMM:CoCo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:coCoMM="http://www.example.org/coCoMM">
+  <featureModels name="Root">
+    <root id="Root_Root" name="Root" featureModel="//@featureModels.0" mandatory="true">
+      <treeConstraints type="And">
+        <children id="Root_A" name="A" featureModel="//@featureModels.0">
+          <treeConstraints type="Or">
+            <children id="Root_A1" name="A1" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.0 //@attributeTypes.0/@featureAttributes.0 //@attributeTypes.1/@featureAttributes.0" mandatory="true"/>
+            <children id="Root_A2" name="A2" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.1 //@attributeTypes.0/@featureAttributes.1 //@attributeTypes.1/@featureAttributes.1" mandatory="true"/>
+            <children id="Root_A3" name="A3" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.2 //@attributeTypes.0/@featureAttributes.0 //@attributeTypes.1/@featureAttributes.2" mandatory="true"/>
+          </treeConstraints>
+        </children>
+        <children id="Root_B" name="B" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.3 //@attributeTypes.0/@featureAttributes.3 //@attributeTypes.1/@featureAttributes.3" mandatory="true"/>
+        <children id="Root_C" name="C" featureModel="//@featureModels.0">
+          <treeConstraints type="Alternative">
+            <children id="Root_C1" name="C1" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.4 //@attributeTypes.0/@featureAttributes.3 //@attributeTypes.1/@featureAttributes.3" mandatory="true"/>
+            <children id="Root_C2" name="C2" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.5 //@attributeTypes.0/@featureAttributes.2 //@attributeTypes.1/@featureAttributes.3" mandatory="true"/>
+            <children id="Root_C3" name="C3" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.6 //@attributeTypes.0/@featureAttributes.2 //@attributeTypes.1/@featureAttributes.4" mandatory="true"/>
+          </treeConstraints>
+        </children>
+        <children id="Root_D" name="D" featureModel="//@featureModels.0">
+          <treeConstraints type="And">
+            <children id="Root_D1" name="D1" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.7 //@attributeTypes.0/@featureAttributes.2 //@attributeTypes.1/@featureAttributes.4" mandatory="true"/>
+            <children id="Root_D2" name="D2" featureModel="//@featureModels.0" featureAttributes="//@attributeTypes.2/@featureAttributes.3 //@attributeTypes.0/@featureAttributes.2 //@attributeTypes.1/@featureAttributes.4"/>
+          </treeConstraints>
+        </children>
+      </treeConstraints>
+    </root>
+    <ctConstraints>
+      <expressions op="implies" features="Root_D2 Root_A"/>
+    </ctConstraints>
+    <ctConstraints>
+      <expressions op="implies" features="Root_C3">
+        <expressions op="not" features="Root_A3"/>
+      </expressions>
+    </ctConstraints>
+  </featureModels>
+  <decisionRules xsi:type="coCoMM:OptimizationDR" type="optimization" funct="minimize" attrType="Costs"/>
+  <decisionRules xsi:type="coCoMM:HardLimitDR" type="hardLimit" attrType="Time">
+    <expressions op="geq" value="1"/>
+    <expressions op="lt" value="24"/>
+  </decisionRules>
+  <decisionRules xsi:type="coCoMM:SelectionStateDR" type="selectionState" feature="Root_A1" state="mandatory"/>
+  <decisionRules xsi:type="coCoMM:SelectionStateDR" type="selectionState" feature="Root_D" state="preferred"/>
+  <decisionRules xsi:type="coCoMM:SelectionStateDR" type="selectionState" feature="Root_C2" state="forbidden"/>
+  <attributeTypes id="Time" name="Time">
+    <elements name="value" dataType="int"/>
+    <elements name="unitMeasure" dataType="String"/>
+    <featureAttributes attrType="Time" name="t1">
+      <elements value="'1'"/>
+      <elements value="Months"/>
+    </featureAttributes>
+    <featureAttributes attrType="Time" name="t2">
+      <elements value="'2'"/>
+      <elements value="Months"/>
+    </featureAttributes>
+    <featureAttributes attrType="Time" name="t3">
+      <elements value="'6'"/>
+      <elements value="Months"/>
+    </featureAttributes>
+    <featureAttributes attrType="Time" name="t4">
+      <elements value="'12'"/>
+      <elements value="Months"/>
+    </featureAttributes>
+  </attributeTypes>
+  <attributeTypes id="Security" name="Security">
+    <elements name="value" dataType="double"/>
+    <elements name="unitMeasure" dataType="String"/>
+    <featureAttributes attrType="Security" name="s1">
+      <elements value="'1'"/>
+      <elements value="NA"/>
+    </featureAttributes>
+    <featureAttributes attrType="Security" name="s2">
+      <elements value="'2'"/>
+      <elements value="NA"/>
+    </featureAttributes>
+    <featureAttributes attrType="Security" name="s3">
+      <elements value="'3'"/>
+      <elements value="NA"/>
+    </featureAttributes>
+    <featureAttributes attrType="Security" name="s4">
+      <elements value="'4'"/>
+      <elements value="NA"/>
+    </featureAttributes>
+    <featureAttributes attrType="Security" name="s5">
+      <elements value="'5'"/>
+      <elements value="NA"/>
+    </featureAttributes>
+  </attributeTypes>
+  <attributeTypes id="Costs" name="Costs">
+    <elements name="value" dataType="double"/>
+    <elements name="unitMeasure" dataType="String"/>
+    <featureAttributes attrType="Costs" name="c1">
+      <elements value="'100'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+    <featureAttributes attrType="Costs" name="c2">
+      <elements value="'250'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+    <featureAttributes attrType="Costs" name="c3">
+      <elements value="'375'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+    <featureAttributes attrType="Costs" name="c4">
+      <elements value="'150'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+    <featureAttributes attrType="Costs" name="c5">
+      <elements value="'450'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+    <featureAttributes attrType="Costs" name="c6">
+      <elements value="'150'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+    <featureAttributes attrType="Costs" name="c7">
+      <elements value="'500'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+    <featureAttributes attrType="Costs" name="c8">
+      <elements value="'500'"/>
+      <elements value="USD"/>
+    </featureAttributes>
+  </attributeTypes>
+  <project decisionRules="//@decisionRules.0 //@decisionRules.1 //@decisionRules.2 //@decisionRules.3 //@decisionRules.4" name="Test" date="0020-08-08T00:00:00.000-0500" target="true"/>
+</coCoMM:CoCo>

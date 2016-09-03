@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="Root">
+				<description>
+					
+				</description>
+				<or name="A">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="A1">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="A2">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="A3">
+						<description>
+							
+						</description>
+					</feature>
+				</or>
+				<feature mandatory="true" name="B">
+					<description>
+						
+					</description>
+				</feature>
+				<alt name="C">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="C1">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="C2">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="C3">
+						<description>
+							
+						</description>
+					</feature>
+				</alt>
+				<and name="D">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="D1">
+						<description>
+							
+						</description>
+					</feature>
+					<feature name="D2">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<var>D2</var>
+					<var>A</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>C3</var>
+					<not>
+						<var>A3</var>
+					</not>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
